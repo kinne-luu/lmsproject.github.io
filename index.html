@@ -507,7 +507,7 @@
             isAdminMode = false; document.body.classList.remove('admin-mode');
             showToast("Endmin log out", false); goHome();
         } else {
-            if(prompt("Nhập mật khẩu (1234):") === "1234") {
+            if(prompt("Nhập mật khẩu :") === "2006") {
                 isAdminMode = true; document.body.classList.add('admin-mode');
                 showToast("Welcome back, Endministrator"); goHome(); 
             } else alert("Sai mật khẩu");
