@@ -2,7 +2,7 @@
   {
     "type": "single",
     "text": "Đối tượng nghiên cứu của Kinh tế chính trị Mác - Lênin là:",
-    "img": null,
+    "img": "https://media.discordapp.net/attachments/1207626301608038461/1466647025587064912/image.png?ex=697d80fb&is=697c2f7b&hm=12bd5c66a07ad442b92047c8b8c46feaf4960338b4f37e3b059b57bc54d00580&=&format=webp&quality=lossless&width=463&height=438",
     "answers": [
       {
         "text": "Nguồn gốc của cải và sự giàu có của tư bản chủ nghĩa.",
@@ -11,7 +11,7 @@
       },
       {
         "text": "Các quan hệ sản xuất và trao đổi được đặt trong sự liên hệ biện chứng với trình độ phát triển của lực lượng sản xuất và kiến trúc thượng tầng.",
-        "img": null,
+        "img": "https://media.discordapp.net/attachments/1207626301608038461/1466647025587064912/image.png?ex=697d80fb&is=697c2f7b&hm=12bd5c66a07ad442b92047c8b8c46feaf4960338b4f37e3b059b57bc54d00580&=&format=webp&quality=lossless&width=463&height=438",
         "correct": true
       },
       {
@@ -179,7 +179,7 @@
       {
         "text": "Sản phẩm của lao động có thể thỏa mãn nhu cầu nào đó của con người thông qua trao đổi, mua bán.",
         "img": null,
-        "correct": false
+        "correct": true
       },
       {
         "text": "Sản phẩm của lao động để thỏa mãn nhu cầu của con người.",
@@ -245,7 +245,7 @@
   {
     "type": "single",
     "text": "Khi đồng thời tăng năng suất lao động và cường độ lao động lên 2 lần thì ý nào dưới đây là đúng?",
-    "img": "https://media.discordapp.net/attachments/1207626301608038461/1466647025587064912/image.png?ex=697d80fb&is=697c2f7b&hm=12bd5c66a07ad442b92047c8b8c46feaf4960338b4f37e3b059b57bc54d00580&=&format=webp&quality=lossless&width=463&height=438",
+    "img": null,
     "answers": [
       {
         "text": "Tổng số hàng hóa tăng lên 2 lần, giá trị 1 hàng hóa giảm 2 lần.",
@@ -259,7 +259,7 @@
       },
       {
         "text": "Giá trị 1 hàng hóa giảm 2 lần, tổng số giá trị hàng hóa tăng 2 lần.",
-        "img": "https://media.discordapp.net/attachments/1207626301608038461/1466647025587064912/image.png?ex=697d80fb&is=697c2f7b&hm=12bd5c66a07ad442b92047c8b8c46feaf4960338b4f37e3b059b57bc54d00580&=&format=webp&quality=lossless&width=463&height=438",
+        "img": null,
         "correct": true
       },
       {
