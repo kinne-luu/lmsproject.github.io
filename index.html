@@ -51,7 +51,6 @@
         }
 
         /* --- 1. ADMIN MODE & UI COMPONENTS --- */
-        
         body.admin-mode::after {
             content: "";
             position: fixed; 
@@ -134,7 +133,7 @@
         .opt-row input[type="text"] { background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.3) !important; border-radius: 0 !important; }
         .opt-row input[type="text"]:focus { border-bottom: 2px solid var(--accent) !important; }
 
-        /* --- BUTTONS --- */
+        /* --- BUTTONS & ERROR FEEDBACK --- */
         .btn-primary { background: var(--accent); color: #000; border: none; padding: 12px 30px; font-weight: 700; border-radius: 30px; cursor: pointer; transition: 0.2s; }
         .btn-primary:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 0 15px var(--accent); }
         .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); padding: 10px 25px; font-weight: 600; border-radius: 30px; cursor: pointer; transition: 0.2s; }
@@ -144,18 +143,25 @@
         .btn-icon { background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-size: 1.2em; transition: 0.2s; }
         .btn-icon:hover { color: var(--danger); transform: scale(1.2); }
 
-        /* --- QUIZ UI (CẬP NHẬT) --- */
-        .ans-btn {
-            display: flex; 
-            align-items: center; 
-            justify-content: flex-start; /* [SỬA] Căn trái nội dung */
-            text-align: left;            /* [SỬA] Căn trái chữ */
-            gap: 15px;
-            
-            /* [SỬA] Thu hẹp chiều ngang và căn giữa ô */
-            width: 96%; 
-            margin: 0 auto 12px auto; 
+        /* [MỚI] Hiệu ứng nháy đỏ khi lỗi */
+        @keyframes flashRedBtn {
+            0% { border-color: var(--accent); color: #000; background: var(--accent); }
+            50% { border-color: var(--danger); color: var(--danger); background: transparent; transform: scale(1.05); box-shadow: 0 0 15px var(--danger); }
+            100% { border-color: var(--accent); color: #000; background: var(--accent); }
+        }
+        .btn-error-flash { animation: flashRedBtn 0.5s ease-in-out; }
+        
+        #save-error-msg {
+            color: var(--danger); font-size: 0.9em; margin-top: 10px; font-weight: 700; text-align: right; min-height: 1.2em; display: block;
+        }
 
+        /* --- QUIZ UI --- */
+        .ans-btn {
+            display: flex; align-items: center; 
+            justify-content: flex-start; /* Căn trái */
+            text-align: left;            /* Căn trái */
+            gap: 15px;
+            width: 96%; margin: 0 auto 12px auto; /* Thu gọn */
             padding: 18px; 
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
             color: var(--text-main); border-radius: 12px; cursor: pointer; transition: 0.2s; font-weight: 500;
@@ -165,16 +171,13 @@
         .ans-btn.correct-show { background: rgba(34, 197, 94, 0.2); border-color: var(--success); color: var(--success); }
         .ans-btn.wrong-show { background: rgba(239, 68, 68, 0.2); border-color: var(--danger); color: var(--danger); }
         
-        /* [MỚI] Animation khi trộn câu hỏi */
+        /* Animation khi trộn câu hỏi */
         @keyframes shuffleEffect {
             0% { transform: scale(1); opacity: 1; filter: blur(0); }
             50% { transform: scale(0.98); opacity: 0.5; filter: blur(4px); }
             100% { transform: scale(1); opacity: 1; filter: blur(0); }
         }
-        .shuffling {
-            animation: shuffleEffect 0.6s ease-in-out;
-            pointer-events: none;
-        }
+        .shuffling { animation: shuffleEffect 0.6s ease-in-out; pointer-events: none; }
 
         /* Specific Review Styles */
         .review-q-block { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
@@ -187,12 +190,7 @@
             display: flex; align-items: center; gap: 10px;
         }
         
-        .review-ans.correct { 
-            color: var(--success); 
-            border: 1px solid var(--success); 
-            background: rgba(34, 197, 94, 0.1); 
-            font-weight: 700; 
-        }
+        .review-ans.correct { color: var(--success); border: 1px solid var(--success); background: rgba(34, 197, 94, 0.1); font-weight: 700; }
 
         /* IMAGES STYLE */
         .ans-btn img, .review-ans img {
@@ -406,10 +404,15 @@
                     </div>
                     <div id="options-container" style="margin-top:20px;"></div>
                     <button id="add-opt-btn" class="btn-add" onclick="addNewOptionRow()">+ Thêm dòng đáp án</button>
-                    <div style="margin-top:30px; text-align:right; gap: 10px; display: flex; justify-content: flex-end;">
-                        <button class="btn-danger" style="border:1px solid rgba(255,255,255,0.2); color: #ccc;" onclick="resetForm()">Làm mới</button>
-                        <button class="btn-primary" onclick="saveQuestion()">Lưu câu hỏi</button>
+                    
+                    <div style="margin-top:30px; text-align:right;">
+                        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                            <button class="btn-danger" style="border:1px solid rgba(255,255,255,0.2); color: #ccc;" onclick="resetForm()">Làm mới</button>
+                            <button id="btn-save-q" class="btn-primary" onclick="saveQuestion()">Lưu câu hỏi</button>
+                        </div>
+                        <div id="save-error-msg"></div>
                     </div>
+
                 </div>
                 <h4 style="margin-top: 40px; color: var(--text-muted); display:flex; justify-content:flex-start; align-items:center;">Danh sách câu hỏi (<span id="list-count">0</span>)</h4>
                 <div id="questions-list"></div>
@@ -517,7 +520,6 @@
                 });
             } else if (q.type === 'fill') {
                 html += `<div style="color:var(--text-muted); margin-bottom:5px;">Các đáp án được chấp nhận:</div>`;
-                // Check if multiple answers or single
                 const answers = q.fillAnswers || [q.fillAnswer];
                 html += `<div class="review-ans correct">${answers.join(' / ')}</div>`;
             } else {
@@ -609,13 +611,14 @@
         editingIndex = -1; document.getElementById('form-header').innerText = "Thêm câu hỏi mới";
         document.getElementById('q-text').value = ""; document.getElementById('q-img').value = "";
         document.getElementById('editor-prev').style.display = 'none'; renderOptionsForm();
+        document.getElementById('save-error-msg').innerText = ""; // Clear error
     }
     function previewImage(input, imgId) {
         const img = document.getElementById(imgId);
         if(input.value) { img.src = input.value; img.style.display = "block"; } else { img.style.display = "none"; }
     }
     
-    // --- UPDATED RENDER FORM LOGIC FOR FILL ---
+    // --- UPDATED RENDER FORM LOGIC ---
     function renderOptionsForm(presetType=null) {
         const type = presetType || document.getElementById('q-type').value;
         const container = document.getElementById('options-container');
@@ -623,20 +626,20 @@
         const addBtn = document.getElementById('add-opt-btn');
         
         container.innerHTML = "";
-        addBtn.style.display = 'block'; // Always show add button now
+        addBtn.style.display = 'block'; 
 
         if(type === 'fill') {
             hint.style.display = 'none';
-            addBtn.onclick = () => addFillOptionRow(); // Switch handler
+            addBtn.onclick = () => addFillOptionRow(); 
             if(editingIndex === -1) addFillOptionRow();
         } else {
-            addBtn.onclick = () => addNewOptionRow(); // Switch handler
+            addBtn.onclick = () => addNewOptionRow(); 
             if(type === 'drag') hint.style.display = 'block'; else hint.style.display = 'none';
             if(editingIndex === -1) { addNewOptionRow(); addNewOptionRow(); }
         }
     }
 
-    // --- NEW HELPER FOR FILL ROWS ---
+    // --- HELPER FOR FILL ROWS ---
     function addFillOptionRow(value = '') {
         const container = document.getElementById('options-container');
         const div = document.createElement('div');
@@ -677,38 +680,94 @@
         container.appendChild(div);
     }
 
+    // --- [MỚI] HÀM HIỂN THỊ LỖI ---
+    function showSaveError(msg) {
+        const errDiv = document.getElementById('save-error-msg');
+        const btn = document.getElementById('btn-save-q');
+        errDiv.innerText = msg;
+        btn.classList.add('btn-error-flash');
+        setTimeout(() => { btn.classList.remove('btn-error-flash'); }, 500);
+    }
+
+    // --- [CẬP NHẬT] HÀM LƯU CÂU HỎI KÈM VALIDATION ---
     function saveQuestion() {
+        document.getElementById('save-error-msg').innerText = ""; // Reset lỗi cũ
+
         const type = document.getElementById('q-type').value;
-        const text = document.getElementById('q-text').value;
-        const img = document.getElementById('q-img').value;
-        if(!text) return alert("Vui lòng nhập nội dung câu hỏi!");
+        const text = document.getElementById('q-text').value.trim();
+        const img = document.getElementById('q-img').value.trim();
+        
+        if(!text) return showSaveError("Vui lòng nhập nội dung câu hỏi!");
+        
         let newQ = { type, text, img: img||null };
         
+        // CHECK TỪNG LOẠI
         if (type === 'fill') {
             newQ.fillAnswers = [];
             const inputs = document.querySelectorAll('.fill-option-text');
             inputs.forEach(inp => {
                 if(inp.value.trim()) newQ.fillAnswers.push(inp.value.trim());
             });
-            if(newQ.fillAnswers.length === 0) return alert("Cần ít nhất 1 đáp án đúng!");
+            // Rule: Ít nhất 1 từ
+            if(newQ.fillAnswers.length === 0) return showSaveError("Cần ít nhất 1 đáp án điền từ!");
+
         } else if(type === 'drag') {
             const rows = document.querySelectorAll('.opt-row');
             newQ.pairs = [];
             rows.forEach(r => {
-                const s = r.querySelector('.drag-source').value; const t = r.querySelector('.drag-target').value;
+                const s = r.querySelector('.drag-source').value.trim(); 
+                const t = r.querySelector('.drag-target').value.trim();
                 if(s && t) newQ.pairs.push({ label:s, target:t });
             });
-            if(newQ.pairs.length < 1) return alert("Vui lòng nhập ít nhất 1 cặp kéo thả!");
+            // Rule: Ít nhất 1 cặp
+            if(newQ.pairs.length < 1) return showSaveError("Cần ít nhất 1 cặp kéo thả!");
+
         } else {
+            // Single hoặc Multi
             const rows = document.querySelectorAll('.opt-row');
             newQ.answers = [];
+            let correctCount = 0;
+
             rows.forEach(r => {
-                const txt = r.querySelector('.opt-text').value; const i = r.querySelector('.opt-img').value; const c = r.querySelector('.correct-chk').checked;
-                if(txt || i) newQ.answers.push({ text:txt, img:i||null, correct:c });
+                const txt = r.querySelector('.opt-text').value.trim(); 
+                const i = r.querySelector('.opt-img').value.trim(); 
+                const c = r.querySelector('.correct-chk').checked;
+                
+                if(txt || i) {
+                    newQ.answers.push({ text:txt, img:i||null, correct:c });
+                    if(c) correctCount++;
+                }
             });
+
+            if(newQ.answers.length === 0) return showSaveError("Vui lòng nhập ít nhất 1 dòng đáp án!");
+
+            // Rule: Single cần >= 1 đúng
+            if (type === 'single' && correctCount < 1) {
+                return showSaveError("Chọn ít nhất 1 đáp án ĐÚNG!");
+            }
+            
+            // Rule: Multi cần >= 2 đúng
+            if (type === 'multi' && correctCount < 2) {
+                return showSaveError("Câu nhiều lựa chọn cần ít nhất 2 đáp án ĐÚNG!");
+            }
         }
-        if(editingIndex > -1) currentQuizData[editingIndex] = newQ; else currentQuizData.push(newQ);
-        saveQuizData(); resetForm(); renderQuestionList();
+
+        // Nếu hợp lệ thì lưu
+        if(editingIndex > -1) currentQuizData[editingIndex] = newQ; 
+        else currentQuizData.push(newQ);
+        
+        saveQuizData(); 
+        resetForm(); 
+        renderQuestionList();
+        
+        // Thông báo thành công nhẹ
+        const errDiv = document.getElementById('save-error-msg');
+        errDiv.style.color = 'var(--success)';
+        errDiv.innerText = "Đã lưu thành công!";
+        setTimeout(() => { 
+            errDiv.innerText = ""; 
+            errDiv.style.color = 'var(--danger)';
+        }, 2000);
     }
 
     function renderQuestionList() {
@@ -734,7 +793,6 @@
         
         if (q.type === 'fill') {
             container.innerHTML = "";
-            // Handle backward compatibility (single fillAnswer string vs array)
             const answers = q.fillAnswers || (q.fillAnswer ? [q.fillAnswer] : []);
             answers.forEach(ans => addFillOptionRow(ans));
         } else {
@@ -753,7 +811,6 @@
 
     let qIdx = 0;
 
-    // [MỚI] Hàm trộn mảng ngẫu nhiên
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -762,25 +819,17 @@
         return array;
     }
 
-    // [MỚI] Hàm trộn câu hỏi: Không hỏi lại, có hiệu ứng, không reset về 0
     function shuffleAndRestart() {
         if(currentQuizData.length === 0) return;
         
         const content = document.getElementById('quiz-content');
-        
-        // 1. Kích hoạt hiệu ứng CSS
         content.classList.add('shuffling');
         
-        // 2. Đợi hiệu ứng chạy được 1 nửa (0.3s) thì mới đổi dữ liệu cho mượt
         setTimeout(() => {
-            shuffleArray(currentQuizData); // Trộn dữ liệu
-            
-            // Lưu ý: Không reset qIdx = 0 nữa. 
-            // Người dùng đang ở câu 5 sẽ thấy nội dung câu 5 đổi thành câu khác.
+            shuffleArray(currentQuizData); 
             renderQuizQ(); 
         }, 300);
 
-        // 3. Gỡ bỏ class hiệu ứng khi chạy xong (0.6s)
         setTimeout(() => {
             content.classList.remove('shuffling');
         }, 600);
@@ -788,10 +837,6 @@
 
     function startQuiz() {
         if(currentQuizData.length === 0) return alert("Bài học này chưa có câu hỏi nào!");
-        
-        // Mặc định KHÔNG trộn, để nguyên thứ tự như khi nhập liệu.
-        // Nếu muốn trộn, người dùng sẽ bấm nút trên giao diện.
-
         qIdx = 0; 
         document.getElementById('quiz-content').style.display = 'block'; 
         renderQuizQ();
