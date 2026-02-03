@@ -590,30 +590,50 @@
         }
         showScreen('lesson-screen');
     }
-    async function smartLoadData(subId, lesId) {
-        currentQuizData = []; 
-        if (isAdminMode) {
-            const localKey = `quiz_${subId}_${lesId}`; const raw = localStorage.getItem(localKey);
-            currentQuizData = raw ? JSON.parse(raw) : []; openAdminEditor();
+async function smartLoadData(subId, lesId) {
+    currentQuizData = []; 
+    const localKey = `quiz_${subId}_${lesId}`;
+    const jsonPath = `data/${subId}/bai${lesId}.json`; // Đảm bảo folder data nằm cùng cấp index.html
+
+    if (isAdminMode) {
+        // 1. Thử lấy từ LocalStorage trước (Ưu tiên những gì đang sửa dở)
+        const raw = localStorage.getItem(localKey);
+        
+        if (raw && JSON.parse(raw).length > 0) {
+            currentQuizData = JSON.parse(raw);
+            openAdminEditor();
         } else {
-            const jsonPath = `data/${subId}/bai${lesId}.json`;
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('quiz-content').style.display = 'none';
-            document.getElementById('review-content').classList.add('hide'); 
-            showScreen('quiz-screen');
+            // 2. Nếu LocalStorage trống (máy mới), phải fetch từ GitHub về để sửa
             try {
-                const response = await fetch(jsonPath); if (!response.ok) throw new Error("File not found");
-                currentQuizData = await response.json(); startQuiz();
+                const response = await fetch(jsonPath);
+                if (response.ok) {
+                    currentQuizData = await response.json();
+                }
             } catch (error) {
-                console.log("Tìm LocalStorage...");
-                const localKey = `quiz_${subId}_${lesId}`; const raw = localStorage.getItem(localKey);
-                if(raw) { currentQuizData = JSON.parse(raw); startQuiz(); }
-                else { alert("Bài học này chưa có dữ liệu!"); goBackToLessons(); }
-            } finally {
-                document.getElementById('loading').style.display = 'none';
+                console.log("Không tìm thấy file JSON trên server, bắt đầu với danh sách rỗng.");
             }
+            openAdminEditor();
+        }
+    } else {
+        // Chế độ học sinh (giữ nguyên logic fetch của bạn)
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('quiz-content').style.display = 'none';
+        document.getElementById('review-content').classList.add('hide'); 
+        showScreen('quiz-screen');
+        try {
+            const response = await fetch(jsonPath); 
+            if (!response.ok) throw new Error("File not found");
+            currentQuizData = await response.json(); 
+            startQuiz();
+        } catch (error) {
+            const raw = localStorage.getItem(localKey);
+            if(raw) { currentQuizData = JSON.parse(raw); startQuiz(); }
+            else { alert("Bài học này chưa có dữ liệu!"); goBackToLessons(); }
+        } finally {
+            document.getElementById('loading').style.display = 'none';
         }
     }
+}
     function saveQuizData() { localStorage.setItem(`quiz_${currentSubjectId}_${currentLessonId}`, JSON.stringify(currentQuizData)); }
     function openAdminEditor() {
         showScreen('admin-editor-screen');
