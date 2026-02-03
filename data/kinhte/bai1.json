@@ -538,28 +538,5 @@
         "correct": true
       }
     ]
-  },
-  {
-    "type": "drag",
-    "text": "Kéo thả các đáp án khớp với các phát biểu từ 1- 4 vế trái dưới đây",
-    "img": null,
-    "pairs": [
-      {
-        "label": "điều kiện đủ",
-        "target": "Sự tách biệt về mặt kinh tế giữa những người sản xuất hàng hóa là........................để nền sản xuất hàng hoá ra đời và phát triển"
-      },
-      {
-        "label": "chuyên môn hóa",
-        "target": "Phân công lao động xã hội là sự phân chia lao động trong xã hội thành các ngành, các lĩnh vực của sản xuất khác nhau tạo nên ........................của những người sản xuất khác nhau"
-      },
-      {
-        "label": "điều kiện cần",
-        "target": "Phân công lao động xã hội là .......để nền sản xuất hàng hoá ra đời và phát triển"
-      },
-      {
-        "label": "sản phẩm",
-        "target": "Sản xuất hàng hoá là sản xuất ra.................để trao đổi, mua bán"
-      }
-    ]
   }
 ]
