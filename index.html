@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS - Project</title>
+    <title>LMS - Project (Updated)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <link rel="icon" type="image/x-icon" href="https://media.discordapp.net/attachments/1466713583587950616/1466714085679697992/Picsart_26-01-30_15-37-57-396.png">
     <style>
         :root {
             /* --- DARK THEME PALETTE --- */
@@ -34,29 +34,15 @@
         }
 
         /* --- SỬA SCROLLBAR ĐỒNG BỘ MÀU TỐI --- */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
-        }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
         /* --- 1. ADMIN MODE & UI COMPONENTS --- */
         body.admin-mode::after {
-            content: "";
-            position: fixed; 
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 99999; 
-            pointer-events: none; 
+            content: ""; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 99999; pointer-events: none; 
             box-shadow: inset 0 0 0 4px var(--danger), inset 0 0 30px rgba(239, 68, 68, 0.4);
             animation: pulseRedSoft 2s infinite alternate;
         }
@@ -143,7 +129,6 @@
         .btn-icon { background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-size: 1.2em; transition: 0.2s; }
         .btn-icon:hover { color: var(--danger); transform: scale(1.2); }
 
-        /* [MỚI] Hiệu ứng nháy đỏ khi lỗi */
         @keyframes flashRedBtn {
             0% { border-color: var(--accent); color: #000; background: var(--accent); }
             50% { border-color: var(--danger); color: var(--danger); background: transparent; transform: scale(1.05); box-shadow: 0 0 15px var(--danger); }
@@ -158,10 +143,8 @@
         /* --- QUIZ UI --- */
         .ans-btn {
             display: flex; align-items: center; 
-            justify-content: flex-start; /* Căn trái */
-            text-align: left;            /* Căn trái */
-            gap: 15px;
-            width: 96%; margin: 0 auto 12px auto; /* Thu gọn */
+            justify-content: flex-start; text-align: left;
+            gap: 15px; width: 96%; margin: 0 auto 12px auto;
             padding: 18px; 
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
             color: var(--text-main); border-radius: 12px; cursor: pointer; transition: 0.2s; font-weight: 500;
@@ -171,7 +154,31 @@
         .ans-btn.correct-show { background: rgba(34, 197, 94, 0.2); border-color: var(--success); color: var(--success); }
         .ans-btn.wrong-show { background: rgba(239, 68, 68, 0.2); border-color: var(--danger); color: var(--danger); }
         
-        /* Animation khi trộn câu hỏi */
+        /* TRUE/FALSE UI SPECIFIC */
+        .tf-row {
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(255,255,255,0.03); padding: 15px; margin-bottom: 12px;
+            border-radius: 10px; border: 1px solid rgba(255,255,255,0.05);
+            gap: 15px;
+        }
+        .tf-text { flex: 1; font-weight: 500; }
+        .tf-btns { display: flex; gap: 8px; flex-shrink: 0; }
+        .tf-btn-opt {
+            padding: 6px 16px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);
+            background: transparent; color: var(--text-muted); cursor: pointer; font-weight: 600;
+            transition: 0.2s;
+        }
+        .tf-btn-opt:hover { border-color: var(--accent); color: var(--accent); }
+        
+        /* True State */
+        .tf-btn-opt.selected[data-val="true"] { background: rgba(34, 197, 94, 0.2); border-color: var(--success); color: var(--success); }
+        /* False State */
+        .tf-btn-opt.selected[data-val="false"] { background: rgba(239, 68, 68, 0.2); border-color: var(--danger); color: var(--danger); }
+        
+        /* Show results */
+        .tf-row.tf-correct { border: 1px solid var(--success); background: rgba(34, 197, 94, 0.05); }
+        .tf-row.tf-wrong { border: 1px solid var(--danger); background: rgba(239, 68, 68, 0.05); }
+
         @keyframes shuffleEffect {
             0% { transform: scale(1); opacity: 1; filter: blur(0); }
             50% { transform: scale(0.98); opacity: 0.5; filter: blur(4px); }
@@ -179,7 +186,7 @@
         }
         .shuffling { animation: shuffleEffect 0.6s ease-in-out; pointer-events: none; }
 
-        /* Specific Review Styles */
+        /* Review Styles */
         .review-q-block { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
         .review-q-block h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.1em; }
         
@@ -189,7 +196,6 @@
             background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
             display: flex; align-items: center; gap: 10px;
         }
-        
         .review-ans.correct { color: var(--success); border: 1px solid var(--success); background: rgba(34, 197, 94, 0.1); font-weight: 700; }
 
         /* IMAGES STYLE */
@@ -292,7 +298,7 @@
         <div id="viewer-container" onmousedown="startDrag(event)">
             <img id="full-image" src="">
         </div>
-        <div class="viewer-hint"><i class="fas fa-mouse"></i> Lăn chuột để Zoom • Kéo để di chuyển</div>
+        <div class="viewer-hint"><i class="fas fa-mouse"></i> Lăn chuột để Zoom • Chuột phải để di chuyển</div>
     </div>
 
     <div id="success-modal">
@@ -386,14 +392,15 @@
                         <select id="q-type" onchange="renderOptionsForm()">
                             <option value="single">Chọn 1 đáp án (Single)</option>
                             <option value="multi">Chọn nhiều đáp án (Multi)</option>
+                            <option value="tf">Đúng / Sai (True/False)</option>
                             <option value="drag">Kéo thả (Drag & Drop)</option>
                             <option value="fill">Điền từ (Fill in blank)</option>
                         </select>
                         <p id="drag-hint" style="color:var(--accent); font-size:0.85em; margin-top:5px; font-style:italic; display:none;">*Chú ý: Đặt tên "Ô đáp án" giống nhau để kéo nhiều đáp án vào chung 1 ô.</p>
                     </div>
                     <div class="form-group">
-                        <label>Nội dung câu hỏi</label>
-                        <textarea id="q-text" rows="2" placeholder="Ví dụ: Thủ đô của Việt Nam là ..."></textarea>
+                        <label>Nội dung câu hỏi (Đầu bài chung)</label>
+                        <textarea id="q-text" rows="2" placeholder="    "></textarea>
                     </div>
                     <div class="form-group">
                         <label>Hình ảnh (Tùy chọn)</label>
@@ -522,6 +529,12 @@
                 html += `<div style="color:var(--text-muted); margin-bottom:5px;">Các đáp án được chấp nhận:</div>`;
                 const answers = q.fillAnswers || [q.fillAnswer];
                 html += `<div class="review-ans correct">${answers.join(' / ')}</div>`;
+            } else if (q.type === 'tf') {
+                 html += `<div style="color:var(--text-muted); margin-bottom:5px;">Kết quả Đúng/Sai:</div>`;
+                 q.items.forEach(item => {
+                     const ansText = item.correct ? "Đúng" : "Sai";
+                     html += `<div class="review-ans correct"><span>${item.text}</span> <strong style="margin-left:auto; text-transform:uppercase;">${ansText}</strong></div>`;
+                 });
             } else {
                 q.answers.forEach(a => {
                     const isCorrect = a.correct ? 'correct' : '';
@@ -611,7 +624,7 @@
         editingIndex = -1; document.getElementById('form-header').innerText = "Thêm câu hỏi mới";
         document.getElementById('q-text').value = ""; document.getElementById('q-img').value = "";
         document.getElementById('editor-prev').style.display = 'none'; renderOptionsForm();
-        document.getElementById('save-error-msg').innerText = ""; // Clear error
+        document.getElementById('save-error-msg').innerText = ""; 
     }
     function previewImage(input, imgId) {
         const img = document.getElementById(imgId);
@@ -632,10 +645,23 @@
             hint.style.display = 'none';
             addBtn.onclick = () => addFillOptionRow(); 
             if(editingIndex === -1) addFillOptionRow();
+        } else if (type === 'tf') {
+            hint.style.display = 'none';
+            addBtn.onclick = () => addTFOptionRow();
+            // Mặc định tạo 1 câu hỏi đúng sai khi tạo mới
+            if(editingIndex === -1) { addTFOptionRow(); }
         } else {
             addBtn.onclick = () => addNewOptionRow(); 
             if(type === 'drag') hint.style.display = 'block'; else hint.style.display = 'none';
-            if(editingIndex === -1) { addNewOptionRow(); addNewOptionRow(); }
+            
+            // LOGIC MỚI: Single mặc định 4 ô, Multi mặc định 2 ô
+            if(editingIndex === -1) { 
+                if (type === 'single') {
+                    addNewOptionRow(); addNewOptionRow(); addNewOptionRow(); addNewOptionRow();
+                } else {
+                    addNewOptionRow(); addNewOptionRow(); 
+                }
+            }
         }
     }
 
@@ -647,6 +673,25 @@
         div.innerHTML = `
             <label style="width: auto; margin:0; color:var(--success); white-space:nowrap; margin-right:10px;">Đáp án:</label>
             <input type="text" class="fill-option-text" value="${value}" placeholder="Nhập một đáp án chấp nhận..." style="flex:1">
+            <button class="btn-icon" onclick="this.parentElement.remove()"><i class="fas fa-times"></i></button>
+        `;
+        container.appendChild(div);
+    }
+    
+    // --- HELPER FOR TRUE/FALSE ROWS ---
+    function addTFOptionRow(data = null) {
+        const container = document.getElementById('options-container');
+        const div = document.createElement('div');
+        div.className = 'opt-row';
+        const txt = data ? data.text : '';
+        const val = data ? (data.correct ? 'true' : 'false') : 'true'; // Mặc định là Đúng
+        
+        div.innerHTML = `
+            <input type="text" class="tf-text" value="${txt}" placeholder="Nội dung câu hỏi con..." style="flex:1">
+            <select class="tf-correct-input" style="width: 100px; background: rgba(0,0,0,0.4) !important;">
+                <option value="true" ${val==='true'?'selected':''}>Đúng</option>
+                <option value="false" ${val==='false'?'selected':''}>Sai</option>
+            </select>
             <button class="btn-icon" onclick="this.parentElement.remove()"><i class="fas fa-times"></i></button>
         `;
         container.appendChild(div);
@@ -680,7 +725,7 @@
         container.appendChild(div);
     }
 
-    // --- [MỚI] HÀM HIỂN THỊ LỖI ---
+    // --- HÀM HIỂN THỊ LỖI ---
     function showSaveError(msg) {
         const errDiv = document.getElementById('save-error-msg');
         const btn = document.getElementById('btn-save-q');
@@ -689,9 +734,9 @@
         setTimeout(() => { btn.classList.remove('btn-error-flash'); }, 500);
     }
 
-    // --- [CẬP NHẬT] HÀM LƯU CÂU HỎI KÈM VALIDATION ---
+    // --- HÀM LƯU CÂU HỎI KÈM VALIDATION ---
     function saveQuestion() {
-        document.getElementById('save-error-msg').innerText = ""; // Reset lỗi cũ
+        document.getElementById('save-error-msg').innerText = ""; 
 
         const type = document.getElementById('q-type').value;
         const text = document.getElementById('q-text').value.trim();
@@ -701,15 +746,23 @@
         
         let newQ = { type, text, img: img||null };
         
-        // CHECK TỪNG LOẠI
         if (type === 'fill') {
             newQ.fillAnswers = [];
             const inputs = document.querySelectorAll('.fill-option-text');
             inputs.forEach(inp => {
                 if(inp.value.trim()) newQ.fillAnswers.push(inp.value.trim());
             });
-            // Rule: Ít nhất 1 từ
             if(newQ.fillAnswers.length === 0) return showSaveError("Cần ít nhất 1 đáp án điền từ!");
+
+        } else if (type === 'tf') {
+            newQ.items = [];
+            const rows = document.querySelectorAll('.opt-row');
+            rows.forEach(r => {
+                const txt = r.querySelector('.tf-text').value.trim();
+                const val = r.querySelector('.tf-correct-input').value === 'true';
+                if(txt) newQ.items.push({ text: txt, correct: val });
+            });
+            if(newQ.items.length === 0) return showSaveError("Cần ít nhất 1 câu hỏi đúng sai!");
 
         } else if(type === 'drag') {
             const rows = document.querySelectorAll('.opt-row');
@@ -719,7 +772,6 @@
                 const t = r.querySelector('.drag-target').value.trim();
                 if(s && t) newQ.pairs.push({ label:s, target:t });
             });
-            // Rule: Ít nhất 1 cặp
             if(newQ.pairs.length < 1) return showSaveError("Cần ít nhất 1 cặp kéo thả!");
 
         } else {
@@ -741,18 +793,14 @@
 
             if(newQ.answers.length === 0) return showSaveError("Vui lòng nhập ít nhất 1 dòng đáp án!");
 
-            // Rule: Single cần >= 1 đúng
             if (type === 'single' && correctCount < 1) {
                 return showSaveError("Chọn ít nhất 1 đáp án ĐÚNG!");
             }
-            
-            // Rule: Multi cần >= 2 đúng
             if (type === 'multi' && correctCount < 2) {
                 return showSaveError("Câu nhiều lựa chọn cần ít nhất 2 đáp án ĐÚNG!");
             }
         }
 
-        // Nếu hợp lệ thì lưu
         if(editingIndex > -1) currentQuizData[editingIndex] = newQ; 
         else currentQuizData.push(newQ);
         
@@ -760,7 +808,6 @@
         resetForm(); 
         renderQuestionList();
         
-        // Thông báo thành công nhẹ
         const errDiv = document.getElementById('save-error-msg');
         errDiv.style.color = 'var(--success)';
         errDiv.innerText = "Đã lưu thành công!";
@@ -791,13 +838,16 @@
         renderOptionsForm(q.type);
         const container = document.getElementById('options-container'); 
         
+        container.innerHTML = "";
         if (q.type === 'fill') {
-            container.innerHTML = "";
             const answers = q.fillAnswers || (q.fillAnswer ? [q.fillAnswer] : []);
             answers.forEach(ans => addFillOptionRow(ans));
+        } else if (q.type === 'tf') {
+            q.items.forEach(item => addTFOptionRow(item));
+        } else if(q.type === 'drag') {
+            q.pairs.forEach(p => addNewOptionRow(p));
         } else {
-            container.innerHTML = "";
-            if(q.type === 'drag') q.pairs.forEach(p => addNewOptionRow(p)); else q.answers.forEach(a => addNewOptionRow(a));
+            q.answers.forEach(a => addNewOptionRow(a));
         }
     }
     
@@ -881,22 +931,29 @@
                 zBox.appendChild(z);
             });
             area.appendChild(dBox); area.appendChild(zBox);
+
         } else if (q.type === 'fill') {
             document.getElementById('check-btn').classList.remove('hide');
             const input = document.createElement('input');
-            input.type = 'text';
-            input.className = 'fill-input';
-            input.id = 'fill-answer-user';
-            input.placeholder = 'Nhập câu trả lời của bạn vào đây...';
-            input.autocomplete = 'off';
-            area.appendChild(input);
-            input.focus();
-            
-            input.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    document.getElementById("check-btn").click();
-                }
+            input.type = 'text'; input.className = 'fill-input'; input.id = 'fill-answer-user';
+            input.placeholder = 'Nhập câu trả lời của bạn vào đây...'; input.autocomplete = 'off';
+            area.appendChild(input); input.focus();
+            input.addEventListener("keypress", function(event) { if (event.key === "Enter") { event.preventDefault(); document.getElementById("check-btn").click(); } });
+
+        } else if (q.type === 'tf') {
+            document.getElementById('check-btn').classList.remove('hide');
+            q.items.forEach((item, idx) => {
+                const row = document.createElement('div');
+                row.className = 'tf-row';
+                row.id = `tf-row-${idx}`;
+                row.innerHTML = `
+                    <div class="tf-text">${item.text}</div>
+                    <div class="tf-btns">
+                        <button class="tf-btn-opt" onclick="selectTF(${idx}, 'true', this)">Đúng</button>
+                        <button class="tf-btn-opt" onclick="selectTF(${idx}, 'false', this)">Sai</button>
+                    </div>
+                `;
+                area.appendChild(row);
             });
 
         } else {
@@ -917,9 +974,19 @@
         }
     }
 
+    // --- TF SELECTION LOGIC ---
+    function selectTF(rowIdx, val, btn) {
+        // Chỉ cho chọn 1 nút trong hàng
+        const row = document.getElementById(`tf-row-${rowIdx}`);
+        row.querySelectorAll('.tf-btn-opt').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        btn.dataset.val = val; // Lưu giá trị đã chọn vào data attribute để check
+    }
+
     function checkAnswer() {
         const q = currentQuizData[qIdx];
         let ok = true;
+        
         if(q.type === 'multi') {
             document.querySelectorAll('.ans-btn').forEach(b => {
                 const s = b.classList.contains('selected'); const c = b.dataset.cor === 'true';
@@ -935,23 +1002,36 @@
                 if(ok) z.classList.add('success'); else z.classList.add('error');
             });
             if(document.querySelector('.drag-area:first-child .draggable')) ok = false;
+
         } else if (q.type === 'fill') {
             const userAns = document.getElementById('fill-answer-user').value.trim().toLowerCase();
             const inputField = document.getElementById('fill-answer-user');
-            
-            // Check against ARRAY of correct answers
             const answers = q.fillAnswers || [q.fillAnswer]; 
             const isCorrect = answers.some(ans => ans.toLowerCase() === userAns);
+            if (isCorrect) { ok = true; inputField.classList.add('correct'); inputField.readOnly = true; } 
+            else { ok = false; inputField.classList.add('wrong'); setTimeout(() => inputField.classList.remove('wrong'), 1000); }
 
-            if (isCorrect) {
-                ok = true;
-                inputField.classList.add('correct');
-                inputField.readOnly = true;
-            } else {
-                ok = false;
-                inputField.classList.add('wrong');
-                setTimeout(() => inputField.classList.remove('wrong'), 1000);
-            }
+        } else if (q.type === 'tf') {
+            // Check từng dòng
+            q.items.forEach((item, idx) => {
+                const row = document.getElementById(`tf-row-${idx}`);
+                const selectedBtn = row.querySelector('.tf-btn-opt.selected');
+                
+                // Reset visual state
+                row.classList.remove('tf-correct', 'tf-wrong');
+                
+                if (!selectedBtn) {
+                    ok = false; // Chưa chọn
+                } else {
+                    const userVal = selectedBtn.dataset.val === 'true';
+                    if (userVal === item.correct) {
+                        row.classList.add('tf-correct');
+                    } else {
+                        row.classList.add('tf-wrong');
+                        ok = false;
+                    }
+                }
+            });
         }
         
         if(ok) {
@@ -959,7 +1039,7 @@
             document.getElementById('check-btn').classList.add('hide');
         } else {
             document.getElementById('quiz-card').classList.add('shake');
-            setTimeout(() => { if(q.type !== 'fill') renderQuizQ(); }, 1500);
+            setTimeout(() => { if(q.type !== 'fill' && q.type !== 'tf') renderQuizQ(); }, 1500);
         }
     }
 
