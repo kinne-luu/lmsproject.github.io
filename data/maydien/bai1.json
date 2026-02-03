@@ -15,12 +15,12 @@
         "correct": false
       },
       {
-        "text": "Biến đổi điện áp xoay chiều nhưng vẫn giữ nguyên tần số.",
+        "text": "Biến đổi điện áp một chiều nhưng vẫn giữ nguyên tần số.",
         "img": null,
         "correct": true
       },
       {
-        "text": "Biến đổi điện áp một chiều nhưng vẫn giữ nguyên tần số.",
+        "text": "Biến đổi điện áp xoay chiều nhưng vẫn giữ nguyên tần số.",
         "img": null,
         "correct": false
       }
