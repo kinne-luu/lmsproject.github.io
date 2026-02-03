@@ -1,0 +1,812 @@
+[
+  {
+    "type": "single",
+    "text": "Tầm tác động của hệ thống truyền thông dữ liệu phụ thuộc vào các đặc tính cơ bản nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Cả 03 đáp án trên đều đúng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Đúng lúc",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sự phát xạ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chính xác",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Một hệ thống thông tin dữ liệu được cấu tạo từ bao nhiêu thành phần ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "3",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "5",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "6",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Nghi thức trong hệ thống thông tin dữ liệu là ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Thiết bị gửi điều hành thông tin dữ liệu",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Môi trường điều hành thông tin dữ liệu",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thiết bị nhận điều hành thông tin dữ liệu",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tập quy luật dùng điều hành thông tin dữ liệu",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "IEEE có nhiều tiểu ban (Committee). Trong đó Tiểu ban 802 phụ trách về các chuẩn cho ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Mạng cục bộ",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Mạng diện rộng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng xe cộ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng di động",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "802.3 là chuẩn cho mạng nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Internet",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Di động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Viba",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Ethernet",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Các chuẩn do IEEE 802 định nghĩa thực hiện chức năng\ncủa tầng thứ mấy trong mô hình tham khảo OSI ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "2",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "3",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "IEEE 802.1 dành cho liên mạng của các mạng nào sau đây ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "OBS",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "LANs",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "WANs",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "MANs",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Đơn vị dữ liệu ở mức LLC được gọi là ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "PDU",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "FDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "BDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "APU",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ sau mô tả vấn đề nào của PDU ?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241511874433106/image.png?ex=69834df7&is=6981fc77&hm=ff4565da4484568234b10860e97f5d36094a209b014b79975c1fed309a4570a9&=&format=webp&quality=lossless&width=1148&height=593",
+    "answers": [
+      {
+        "text": "Nghi thức PDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Dạng thức PDU",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Địa chỉ PDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Môi trường PDU",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "10 Mô hình OSI gồm có bao nhiêu tầng?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241427132583973/image.png?ex=69834de2&is=6981fc62&hm=1eeefdbc6528a456890f96a848a675a74f7c14329059425f51cd3cf11f150075&=&format=webp&quality=lossless&width=564&height=636",
+    "answers": [
+      {
+        "text": "4",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "6",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "7",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trong mô hình OSI dưới đây tầng liên kết dữ liệu làm\nnhiệm vụ ?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241328780611615/image.png?ex=69834dcb&is=6981fc4b&hm=506862d1cdf7c01a2108af8b519a23a116f2507cdfc21dc9a9dfcb95df588f8d&=&format=webp&quality=lossless&width=1173&height=606",
+    "answers": [
+      {
+        "text": "Gửi các khối dữ liệu (frame) với các cơ chế đồng bộ hóa",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Kiểm soát lỗi và kiểm soát luồng dữ liệu cần thiết",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cả 03 đáp án trên đều đúng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Cung cấp phương tiện để truyền thông tin qua liên kết vật lý đảm bảo tin cậy",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ dưới đây mô tả khung MAC của chuẩn nào?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241476889739355/image.png?ex=69834dee&is=6981fc6e&hm=890fb5f4f829f384408739f906256af3b48d2d9f63f60d2c6d14ded461bf3392&=&format=webp&quality=lossless&width=1129&height=619",
+    "answers": [
+      {
+        "text": "Khung MAC của 802.5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Khung MAC của 802.11",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Khung MAC của 802.3",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Khung MAC của 802.4",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Cách bố trí vật lý của 10Base2 được trình bày trong\nhình sau đây bao gồm các đầu nối và cáp được sử dụng\nlà:",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468247020044161255/image.png?ex=69835318&is=69820198&hm=f27bd5bf4af2c5022367d037a714f16179ac5c2a6674c4ee060daa40b6cc9e56&=&format=webp&quality=lossless&width=1219&height=611",
+    "answers": [
+      {
+        "text": "Các đầu nối BNC-T",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cáp đồng trục nhỏ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "NICs",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cả 03 đáp án trên",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ sau đây mô tả các đoạn Ethernet loại nào?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468247238307479625/image.png?ex=6983534c&is=698201cc&hm=8e4d1fa29a85021008881d45a496e9258d1a93a0d2d470ac493846bc84f8d758&=&format=webp&quality=lossless&width=1206&height=755",
+    "answers": [
+      {
+        "text": "Các đoạn Ethernet 10Base5",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Các đoạn Ethernet 10Base3",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các đoạn Ethernet 10Base6",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các đoạn Ethernet 10Base4",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Lớp vận chuyển (Transport) đảm nhiệm vai trò gì?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Cung cấp truyền tin đầu cuối đáng tin cậy",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Giao tiếp trực tiếp với lớp vật lý",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Định tuyến gói tin giữa các mạng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chia nhỏ khung dữ liệu",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "802.4 là chuẩn cho mạng nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Token Bus",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Vệ tinh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Internet",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Ethernet",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "TCP/IP được xem là giản lược của mô hình tham chiếu\nOSI với bao nhiêu tầng?",
+    "img": null,
+    "answers": [
+      {
+        "text": "6",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "7",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "802.5 là chuẩn cho mạng nào ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Không dây",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Di động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hữu tuyến",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Token Ring",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Mô hình TCP/IP hướng đến tối đa độ linh hoạt tại tầng\nnào cho người phát triển phần mềm ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Tầng vận chuyển",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Truy cập mạng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Internet",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng ứng dụng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Telnet trong tầng ứng dụng sử dụng trong việc?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Truy cập mạng từ xa",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Dịch vụ truyền âm thanh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Dịch vụ truyền tệp",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Dịch vụ thư tín điện tử",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Tầng vận chuyển trong mô hình TCP/IP liên quan đến\nchủ đề về chất lượng dịch vụ như ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Kiểm soát luồng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cả 03 đáp án trên đều đúng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Kiểm soát lỗi",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Độ tin cậy",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "802.11 là chuẩn cho mạng nào ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Mạng hữu tuyến",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng không dây",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Mạng di động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng thông tin vệ tinh",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Các thiết bị thông tin phải là một phần của hệ thống\nthông tin được cấu thành từ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Dữ liệu và môi trường truyền",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phần cứng và phần mềm",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phần mềm và mạng máy tính",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phần cứng và mạng máy tính",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "TCP/IP là bộ giao thức cho phép kết nối ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Các hệ thống mạng đô thị với nhau",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các hệ thống mạng không đồng nhất với nhau",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Các hệ thống mạng diện rộng với nhau",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các hệ thống mạng cá nhân với nhau",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Tầng ứng dụng trong mô hình TCP/IP bao gồm các chi\ntiết của các tầng nào trong mô hình OSI. (chọn 03 đáp án)",
+    "img": null,
+    "answers": [
+      {
+        "text": "Tầng trình bày",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tầng điều khiển",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng phiên",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tầng ứng dụng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trong mô hình OSI dưới đây tầng vận chuyển làm\nnhiệm vụ?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241328780611615/image.png?ex=69834dcb&is=6981fc4b&hm=506862d1cdf7c01a2108af8b519a23a116f2507cdfc21dc9a9dfcb95df588f8d&=&format=webp&quality=lossless&width=1173&height=606",
+    "answers": [
+      {
+        "text": "Thực hiện cả việc kiểm soát lỗi và kiểm soát luồng dữ liệu giữa 2 đầu nút",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thực hiện việc ghép kênh (multiplexing), cắt / hợp dữ liệu nếu cần",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thực hiện việc truyền dữ liệu giữa hai đầu mút (end - to end)",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cả 03 đáp án trên đều đúng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trong mô hình OSI dưới đây tầng mạng làm nhiệm vụ ?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241328780611615/image.png?ex=69834dcb&is=6981fc4b&hm=506862d1cdf7c01a2108af8b519a23a116f2507cdfc21dc9a9dfcb95df588f8d&=&format=webp&quality=lossless&width=1173&height=606",
+    "answers": [
+      {
+        "text": "Chuyển tiếp thông tin với công nghệ chuyển mạch thích hợp",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cả 03 đáp án trên đều đúng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Thực hiện việc chọn đường",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thực hiện kiểm soát luồng dữ liệu và cắt/hợp dữ liệu nếu cần",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ sau mô tả?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Trường kiểm soát trong một PDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trường cờ trong một PDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trường tín hiệu trong một PDU",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trường điều khiển trong một PDU",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ sau mô tả?",
+    "img": "https://media.discordapp.net/attachments/1468241208072601863/1468241268785283196/image.png?ex=69834dbd&is=6981fc3d&hm=4c4ea084c527f314b289647c772b0ed9397b52da6d295d3c7df984994597dee3&=&format=webp&quality=lossless&width=1148&height=463",
+    "answers": [
+      {
+        "text": "Các thành phần của môi trường truyền dẫn",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các thành phần của hệ thống thông tin dữ liệu",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Thông điệp khi truyền dữ liệu từ bộ gởi đến bộ nhận",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nghi thức lớp liên kết dữ liệu",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Giao thức UDP cung cấp một dịch vụ đơn giản hơn cho\ntầng nào trong mô hình TCP/IP ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Truy cập mạng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng vận chuyển",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Internet",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng ứng dụng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  }
+]
