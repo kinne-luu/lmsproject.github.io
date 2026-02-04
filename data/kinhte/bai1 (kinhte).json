@@ -1,0 +1,755 @@
+[
+  {
+    "type": "single",
+    "text": "Đối tượng nghiên cứu của Kinh tế chính trị Mác Lênin là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Các quan hệ sản xuất và trao đổi được đặt trong sự liên hệ biện chứng với trình độ phát triển của lực lượng sản xuất và kiến trúc thượng tầng.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Sự sản xuất của xã hội.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Các phương thức sản xuất xã hội được đặt trong sự liên hệ biện chứng với trình độ phát triển của lực lượng sản xuất và kiến trúc thượng tầng.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nguồn gốc của cải và sự giàu có của tư bản chủ nghĩa.",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Những chức năng cơ bản của Kinh tế chính trị Mác Lênin?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Chức năng nhận thức, chức năng thực tiễn, chức năng thông tin, chức năng tư tưởng.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chức năng nhận thức, chức năng thực tiễn, chức năng tư tưởng, chức năng phương pháp luận.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Chức năng phê phán, chức năng thực tiễn, chức năng thông tin, chức năng tư tưởng.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chức năng phê phán, chức năng thực tiễn, chức năng phương pháp luận, chức năng tư tưởng.",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Điều kiện nào là “điều kiện đủ” để sản xuất hàng hoá ra đời?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Có nhà nước quản lý sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sự tách biệt về mặt kinh tế của các chủ thể sản xuất",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Có thị trường phát triển mạnh mẽ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Có công cụ lao động tiên tiến",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Chọn phương án trả lời đúng nhất về sản xuất hàng hoá.",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sản xuất ra sản phẩm nhằm mục đích trao đổi, mua bán",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Sản xuất phục vụ cho tiêu dùng nội bộ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Quá trình lưu thông sản phẩm trong xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân phối sản phẩm cho các đối tượng sử dụng",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Điều kiện nào được gọi là “điều kiện cần\" để sản xuất hàng hoá ra đời?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Có công cụ lao động hiện đại",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Có nhà nước quản lý xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Có phân công lao động xã hội",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Có thị trường phát triển sôi động",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "drag",
+    "text": "Kéo thả các đáp án khớp với các phát biểu từ 1- 4 vế trái dưới đây",
+    "img": null,
+    "groups": [
+      {
+        "zone": "1. Sự tách biệt về mặt kinh tế giữa những người sản xuất hàng hóa là........................để nền sản xuất hàng hoá ra đời và phát triển",
+        "items": [
+          "điều kiện đủ"
+        ]
+      },
+      {
+        "zone": "Phân công lao động xã hội là sự phân chia lao động trong xã hội thành các ngành, các lĩnh vực của sản xuất khác nhau tạo nên ........................của những người sản xuất khác nhau",
+        "items": [
+          "Chuyên môn hóa"
+        ]
+      },
+      {
+        "zone": "Phân công lao động xã hội là .......để nền sản xuất hàng hoá ra đời và phát triển",
+        "items": [
+          "điều kiện cần"
+        ]
+      },
+      {
+        "zone": "Sản xuất hàng hoá là sản xuất ra.................để trao đổi, mua bán",
+        "items": [
+          "sản phẩm"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Điều kiện ra đời của sản xuất hàng hoá là:\nHãy chọn 2 đáp án đúng nhất !",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sự tách biệt về mặt kinh tế của các chủ thể sản xuất",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phân công lao động xã hội",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phân công lao động cá biệt và chế độ tư hữu về tư liệu sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân công lao động chung và chế độ sở hữu khác nhau về tư liệu sản xuất",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hàng hoá là gì?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sản phẩm được sản xuất ra để đem bán",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm ở trên thị trường",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm của lao động để thoả mãn nhu cầu của con người",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm của lao động có thể thoả mãn nhu cầu nào đó của con người thông qua trao đổi, mua bán",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Giá trị của hàng hoá được quyết định bởi yếu tố nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sự hao phí sức lao động của con người",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Công dụng của hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Lao động trừu tượng của người sản xuất kết tinh trong hàng hoá",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Sự khan hiếm của hàng hoá",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hãy chọn phương án trả lời đúng nhất về lượng giá trị của một đơn vị hàng hoá.",
+    "img": null,
+    "answers": [
+      {
+        "text": "Tỷ lệ nghịch với cường độ lao động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tỷ lệ thuận với năng suất lao động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phụ thuộc vào cường độ lao động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tỷ lệ nghịch với năng suất lao động",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Khi đồng thời tăng năng suất lao động và cường độ lao động lên 2 lần thì ý nào dưới đây là đúng?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị 1 hàng hoá giảm 2 lần, tổng số giá trị hàng hoá tăng 2 lần",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tổng số hàng hoá tăng lên 2 lần, giá trị 1 hàng hoá giảm 2 lần",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tổng số giá trị hàng hoá tăng 2 lần, tổng số hàng hoá tăng 2 lần",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tổng số hàng hoá tăng lên 4 lần, tổng số giá trị hàng hoá tăng lên 4 lần",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "drag",
+    "text": "Kéo thả các hàng hoá sau đây vào cột tương ứng",
+    "img": null,
+    "groups": [
+      {
+        "zone": "Hàng hoá hữu hình",
+        "items": [
+          "Xe máy"
+        ]
+      },
+      {
+        "zone": "Hàng hoá hữu hình",
+        "items": [
+          "Quần, áo"
+        ]
+      },
+      {
+        "zone": "Hàng hoá hữu hình",
+        "items": [
+          "Sách, vở"
+        ]
+      },
+      {
+        "zone": "Hàng hoá hữu hình",
+        "items": [
+          "Điện thoại"
+        ]
+      },
+      {
+        "zone": "Hàng hoá vô hình",
+        "items": [
+          "Sách điện tử"
+        ]
+      },
+      {
+        "zone": "Hàng hoá vô hình",
+        "items": [
+          "Khoá học trực tuyến"
+        ]
+      },
+      {
+        "zone": "Hàng hoá vô hình",
+        "items": [
+          "Dịch vụ y tế"
+        ]
+      },
+      {
+        "zone": "Hàng hoá vô hình",
+        "items": [
+          "Dịch vụ y tế"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Trong 8 giờ công nhân sản xuất được 100 sản phẩm có tổng giá trị là 600 USD. Giá trị của một đơn vị sản phẩm là 6,0 USD. Chọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Nếu cường độ lao động tăng lên 3 lần thì giá trị của một đơn vị sản phẩm là 3,0 USD",
+        "correct": false
+      },
+      {
+        "text": "Nếu năng suất lao động tăng lên 3 lần thì giá trị của một đơn vị sản phẩm là 2,0 USD",
+        "correct": true
+      },
+      {
+        "text": "Nếu năng suất lao động tăng lên 2 lần thì giá trị của một đơn vị sản phẩm là 6,0 USD",
+        "correct": false
+      },
+      {
+        "text": "Nếu cường độ lao động tăng lên 2 lần thì giá trị của một đơn vị sản phẩm là 6,0 USD",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Trong 8 giờ công nhân sản xuất được 100 sản phẩm có tổng giá trị là 300 USD. Giá trị của một đơn vị sản phẩm là 3 USD. Chọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Nếu năng suất lao động tăng lên 3 lần thì giá trị của một đơn vị sản phẩm là 1,0 USD",
+        "correct": true
+      },
+      {
+        "text": "Nếu năng suất lao động tăng lên 2 lần thì giá trị của một đơn vị sản phẩm là 1,5 USD",
+        "correct": true
+      },
+      {
+        "text": "Nếu năng suất lao động tăng lên 2 lần thì giá trị của một đơn vị sản phẩm là 3 USD",
+        "correct": false
+      },
+      {
+        "text": "Nếu năng suất lao động tăng lên 3 lần thì giá trị của một đơn vị sản phẩm là 6,0 USD",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Sản xuất hàng hoá khác với sản xuất tự nhiên ở điểm nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sản xuất hàng hoá không phụ thuộc thị trường",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản xuất tự nhiên có năng suất cao hơn",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản xuất hàng hoá hướng đến trao đổi, còn sản xuất tự nhiên là để tự tiêu dùng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Sản xuất tự nhiên gắn với công nghệ cao",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Phương pháp nghiên cứu quan trọng của Kinh tế chính trị Mác – Lênin là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Khảo sát đối tượng và thu thập số liệu.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thực nghiệm khoa học",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mô hình hóa đối tượng.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trừu tượng hóa khoa học.",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Sản xuất hàng hoá làm phát sinh quan hệ nào sau đây? \nHãy chọn 2 đáp án đúng nhất !",
+    "img": null,
+    "answers": [
+      {
+        "text": "Quan hệ trao đổi, mua bán giữa các chủ thể sản xuất",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Quan hệ giữa người sản xuất và sản phẩm",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Quan hệ giữa người với người thông qua sản phẩm hàng hoá",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Quan hệ giữa con người và tự nhiên",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Đặc điểm nào sau đây không thuộc về sản xuất hàng hoá?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Có sự tách biệt tương đối giữa các chủ thể sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm để trao đổi, mua bán",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm phục vụ hoàn toàn cho tiêu dùng cá nhân",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Có sự phân công lao động xã hội",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Sự giống nhau giữa quy luật kinh tế và chính sách kinh tế là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Điều chỉnh hành vi kinh tế của con người.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tồn tại khách quan, không phụ thuộc vào suy nghĩ của con người.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tồn tại vĩnh viễn cùng với sự tồn tại, phát triển của xã hội loài người.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Luôn thúc đẩy sự giàu có và văn minh của xã hội.",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Điều kiện ra đời của sản xuất hàng hoá là:\nHãy chọn 2 đáp án đúng nhất !",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sự tách biệt về mặt kinh tế của các chủ thể sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân công lao động chung và chế độ sở hữu khác nhau về tư liệu sản xuất",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phân công lao động xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân công lao động cá biệt và chế độ tư hữu về tư liệu sản xuất",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Thế nào là lao động giản đơn?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Là lao động làm công việc đơn giản",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Là lao động làm ra các hàng hoá chất lượng không cao",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Là lao động chỉ làm một công đoạn của quá trình tạo ra hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Là lao động không cần trải qua đào tạo cũng có thể làm được.",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Tính chất hai mặt của lao động sản xuất hàng hoá là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Lao động tư nhân và lao động xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Lao động giản đơn và lao động phức tạp",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Lao động cụ thể và lao động trừu tượng.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Lao động quá khứ và lao động sống",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Mục đích nghiên cứu của Kinh tế chính trị Mác – Lênin là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Xây dựng, hoàn thiện hệ thống các phạm trù kinh tế.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giải thích những biến đổi kinh tế trong các giai đoạn phát triển của xã hội, đặc biệt là trong sản xuất tư bản chủ nghĩa.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tìm ra vai trò của các ngành kinh tế đối với sự giàu có của một quốc gia.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tìm ra các quy luật kinh tế chi phối các quan hệ giữa người với người trong sản xuất và trao đổi.",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Sản xuất hàng hoá tồn tại:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Trong mọi xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trong chế độ nô lệ, phong kiến, TBCN",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trong các xã hội, có phân công lao động xã hội và sự tách biệt về kinh tế giữa những người sản xuất.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Chỉ có trong CNTB",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Sản xuất hàng hoá xuất hiện dựa trên:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Phân công lao động cá biệt và chế độ tư hữu về tư liệu sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân công lao động chung và chế độ sở hữu khác nhau về TLSX",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phân công lao động xã hội và sự tách biệt về kinh tế giữa những người sản xuất.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phân công lao động xã hội và chế độ tư hữu hoặc những hình thức sở hữu khác",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Yếu tố quyết định đến giá cả hàng hoá là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị của hàng hoá.",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Quan hệ cung cầu về hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giá trị sử dụng của hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mốt thời trang của hàng hoá",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Lượng giá trị xã hội của hàng hoá được quyết định bởi:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Hao phí vật tư kỹ thuật",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hao phí lao động cần thiết của người sản xuất hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hao phí lao động sống của người sản xuất hàng hoá",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thời gian lao động xã hội cần thiết.",
+        "img": null,
+        "correct": true
+      }
+    ]
+  }
+]
