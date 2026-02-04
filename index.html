@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS - Project (Bloom & Drag Upgrade)</title>
+    <title>LMS - Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://media.discordapp.net/attachments/1466713583587950616/1466714085679697992/Picsart_26-01-30_15-37-57-396.png">
+    <link rel="icon" type="image/x-icon" href="https://media.discordapp.net/attachments/1466713583587950616/1466714085679697992/Picsart_26-01-30_15-37-57-396.png?ex=69830570&is=6981b3f0&hm=f24cad8c71896d16edb141afe5159f4b95368225dce1132c94dfb4d412e34f9c&=&format=webp&quality=lossless&width=798&height=755">
     <style>
         :root {
             /* --- DARK THEME PALETTE --- */
@@ -99,7 +99,7 @@
         .card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); border-color: var(--accent); }
         .card i { font-size: 2em; margin-bottom: 10px; color: var(--accent); transition: 0.3s; }
         
-        /* --- BLOOM EFFECT (NEW) --- */
+        /* --- BLOOM EFFECT --- */
         .card:hover i {
             color: #fff;
             text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 40px var(--accent);
@@ -121,7 +121,7 @@
         .opt-row input[type="text"] { background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.3) !important; border-radius: 0 !important; }
         .opt-row input[type="text"]:focus { border-bottom: 2px solid var(--accent) !important; }
 
-        /* --- DRAG EDITOR STYLES (NEW) --- */
+        /* --- DRAG EDITOR STYLES --- */
         .drag-group-editor {
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
             border-radius: 10px; padding: 15px; margin-bottom: 15px;
@@ -148,6 +148,25 @@
             50% { border-color: var(--danger); color: var(--danger); background: transparent; transform: scale(1.05); box-shadow: 0 0 15px var(--danger); }
         }
         #save-error-msg { color: var(--danger); font-size: 0.9em; margin-top: 10px; font-weight: 700; text-align: right; min-height: 1.2em; display: block; }
+        
+        /* MIX BUTTON STYLE - UPDATED */
+        .btn-mix-all {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 10px 20px; 
+            border-radius: 8px;
+            background: linear-gradient(45deg, #3b82f6, #2563eb);
+            color: white; 
+            font-family: 'Inter', sans-serif;
+            font-weight: 600; 
+            font-size: 0.95em;
+            border: none; cursor: pointer; 
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3); 
+            transition: 0.3s;
+        }
+        .btn-mix-all:hover {
+            transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37, 99, 235, 0.5);
+            filter: brightness(1.1);
+        }
 
         /* --- QUIZ UI --- */
         .ans-btn {
@@ -184,16 +203,25 @@
         /* Review Styles */
         .review-q-block { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
         .review-q-block h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.1em; }
+        
         .review-ans { 
-            padding: 12px; margin-bottom: 8px; border-radius: 8px; font-size: 0.95em; color: var(--text-muted); 
-            background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 12px; margin-bottom: 6px; border-radius: 8px; font-size: 0.95em; color: var(--text-muted); 
+            background: rgba(255,255,255,0.02); border: 1px solid transparent;
             display: flex; align-items: center; gap: 10px;
         }
-        .review-ans.correct { color: var(--success); border: 1px solid var(--success); background: rgba(34, 197, 94, 0.1); font-weight: 700; }
+        /* Style cho đáp án đúng trong Review */
+        .review-ans.correct-highlight { 
+            color: var(--success); border: 1px solid var(--success); 
+            background: rgba(34, 197, 94, 0.1); font-weight: 700; 
+        }
+        .review-ans.normal-opt { opacity: 0.7; }
 
-        /* IMAGES */
-        .ans-btn img, .review-ans img { max-width: 80px; height: auto; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); object-fit: contain; margin-right: 10px; order: -1; cursor: zoom-in; }
-        #display-q-img { max-width: 33.33% !important; height: auto; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); display: none; margin: 10px 0; cursor: zoom-in; }
+        /* IMAGES UPDATES */
+        /* Answer images: Shrink to 75% width */
+        .ans-btn img, .review-ans img { max-width: 75%; height: auto; border-radius: 5px; border: 1px solid rgba(255,255,255,0.2); object-fit: contain; margin-right: 10px; order: -1; cursor: zoom-in; }
+        
+        /* Question images: Keep original size (max 100% container) */
+        #display-q-img { max-width: 100% !important; height: auto; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.2); display: none; margin: 10px 0; cursor: zoom-in; }
         
         /* DRAG UI */
         .drag-area { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 20px 0; }
@@ -216,7 +244,39 @@
         .q-item:hover { border-color: var(--accent); background: rgba(255,255,255,0.03); }
         .q-item-content { flex: 1; display: flex; align-items: center; overflow: hidden; padding-right: 10px; }
         .q-item-content span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .q-num { color: var(--text-muted); font-weight: bold; font-size: 0.8em; margin-right: 10px; min-width: 25px; }
+        
+        /* --- NEW: EDITABLE Q-NUM --- */
+        .q-num { 
+            color: var(--text-muted); font-weight: bold; font-size: 0.8em; 
+            margin-right: 10px; min-width: 35px; 
+            cursor: pointer; /* Báo hiệu có thể click */
+            padding: 2px 5px; border-radius: 4px;
+            transition: 0.2s;
+            border: 1px solid transparent; /* Để khi hover không bị nhảy layout */
+        }
+        .q-num:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        /* Xóa mũi tên input number */
+        .q-num input::-webkit-outer-spin-button,
+        .q-num input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .q-num input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+
+        .q-num input {
+            width: 40px !important; padding: 2px !important; 
+            height: 20px; font-size: 1em; text-align: center;
+            background: #0f172a !important; border: 1px solid var(--accent);
+            color: white !important; /* Chữ màu trắng */
+        }
+
         .btn-group { display: flex; gap: 5px; flex-shrink: 0; }
         .btn-sm { padding: 6px 12px; font-size: 0.85em; border: 1px solid rgba(255,255,255,0.2); margin-left: 5px; color: #ccc; border-radius: 6px; background: transparent !important; cursor: pointer; transition: 0.2s; }
         .btn-sm:hover { border-color: var(--accent); color: var(--accent); background: rgba(251, 191, 36, 0.05) !important; }
@@ -242,7 +302,7 @@
         /* --- VIEWER & MODALS --- */
         #image-viewer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); z-index: 50000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         #image-viewer.active { opacity: 1; pointer-events: all; }
-        #full-image { max-width: 90vw; max-height: 90vh; transition: transform 0.1s linear; }
+        #full-image { max-width: 90vw; max-height: 90vh; transition: transform 0.1s linear; cursor: grab; }
         .close-viewer { position: absolute; top: 20px; right: 20px; color: white; font-size: 2em; cursor: pointer; background: none; border: none; z-index: 50001; }
         
         #success-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 60000; display: none; align-items: center; justify-content: center; }
@@ -294,7 +354,14 @@
                 </button>
                 <h2 id="current-subject-title" style="color: var(--accent);">Tên Môn</h2>
                 <p id="admin-hint" class="hide" style="color:var(--danger); font-weight:600; background: rgba(239, 68, 68, 0.1); display: inline-block; padding: 5px 15px; border-radius: 20px; border: 1px solid var(--danger);">[Đang ở chế độ chỉnh sửa]</p>
+                
                 <div class="grid" id="lessons-grid"></div>
+
+                <div style="margin-top: 25px; text-align: right;">
+                    <button id="btn-mix-all-lessons" class="btn-mix-all" onclick="mixAllLessons()">
+                        <i class="fas fa-random"></i> Trộn tất cả câu hỏi
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -303,6 +370,11 @@
                 <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom: 15px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
                     <span id="progress" style="font-weight: 700; color: var(--accent);">Câu 1</span>
                     <div style="display:flex; align-items:center; gap: 15px;">
+                        
+                        <button onclick="enableStudyMode()" class="btn-sm" style="color: #fff; border-color: #3b82f6; background: rgba(59,130,246,0.2) !important;">
+                            <i class="fas fa-eye"></i> <span>Ôn tập nhanh</span>
+                        </button>
+
                         <button onclick="shuffleAndRestart()" class="btn-sm" style="color: var(--accent); border-color: var(--accent); display:flex; gap:5px; align-items:center;">
                             <i class="fas fa-random"></i> <span>Trộn câu hỏi</span>
                         </button>
@@ -409,6 +481,7 @@
     let isAdminMode = false;
     let currentQuizData = [];
     let editingIndex = -1;
+    let currentSubjectObj = null; // Store full object for Mix All
 
     // --- ZOOM VARS ---
     let imgScale = 1; let imgTranslateX = 0; let imgTranslateY = 0;
@@ -425,6 +498,11 @@
             grid.appendChild(card);
         });
         document.getElementById('image-viewer').addEventListener('wheel', handleZoom, { passive: false });
+        // Click background to close image
+        document.getElementById('image-viewer').addEventListener('click', function(e) {
+            if(e.target.id === 'image-viewer' || e.target.id === 'viewer-container') closeImageViewer();
+        });
+
         window.addEventListener('mousemove', dragImage);
         window.addEventListener('mouseup', stopDragImage);
     }
@@ -450,14 +528,14 @@
     function startDrag(e) {
         if(e.target.id !== 'full-image' && e.target.id !== 'viewer-container') return;
         isDraggingImg = true; startDragX = e.clientX - imgTranslateX; startDragY = e.clientY - imgTranslateY;
-        document.getElementById('viewer-container').style.cursor = 'grabbing';
+        document.getElementById('full-image').style.cursor = 'grabbing';
     }
     function dragImage(e) {
         if (!isDraggingImg) return; e.preventDefault();
         imgTranslateX = e.clientX - startDragX; imgTranslateY = e.clientY - startDragY;
         updateImageTransform();
     }
-    function stopDragImage() { isDraggingImg = false; document.getElementById('viewer-container').style.cursor = 'grab'; }
+    function stopDragImage() { isDraggingImg = false; document.getElementById('full-image').style.cursor = 'grab'; }
     function updateImageTransform() { document.getElementById('full-image').style.transform = `translate(${imgTranslateX}px, ${imgTranslateY}px) scale(${imgScale})`; }
 
     // --- UTILS ---
@@ -495,10 +573,17 @@
         toast.querySelector('span').innerText = msg;
         toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 1000);
     }
+    
     function openLessons(subject) {
         currentSubjectId = subject.id;
+        currentSubjectObj = subject;
         document.getElementById('current-subject-title').innerText = subject.name;
         document.getElementById('admin-hint').classList.toggle('hide', !isAdminMode);
+        
+        // Hide Mix button if in Admin mode or no lessons
+        const mixBtnContainer = document.querySelector('#lesson-screen .glass-panel > div:last-child');
+        if (mixBtnContainer) mixBtnContainer.style.display = isAdminMode ? 'none' : 'block';
+
         const grid = document.getElementById('lessons-grid'); grid.innerHTML = "";
         for(let i=1; i<=subject.lessons; i++) {
             const card = document.createElement('div');
@@ -507,6 +592,46 @@
             grid.appendChild(card);
         }
         showScreen('lesson-screen');
+    }
+
+    async function mixAllLessons() {
+        if (!currentSubjectObj) return;
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('quiz-content').style.display = 'none';
+        document.getElementById('review-content').classList.add('hide'); 
+        showScreen('quiz-screen');
+        
+        currentQuizData = [];
+        const promises = [];
+
+        // Try to fetch all lessons
+        for(let i = 1; i <= currentSubjectObj.lessons; i++) {
+            const jsonPath = `data/${currentSubjectId}/bai${i}.json`;
+            const p = fetch(jsonPath)
+                .then(res => { if(res.ok) return res.json(); return []; })
+                .catch(() => []); // If fail, return empty
+            promises.push(p);
+        }
+
+        try {
+            const results = await Promise.all(promises);
+            results.forEach(data => {
+                if(Array.isArray(data)) currentQuizData = currentQuizData.concat(data);
+            });
+            
+            if(currentQuizData.length === 0) {
+                alert("Không tìm thấy dữ liệu nào để trộn!");
+                goBackToLessons();
+            } else {
+                shuffleArray(currentQuizData);
+                startQuiz();
+            }
+        } catch (e) {
+            alert("Lỗi khi trộn dữ liệu!");
+            goBackToLessons();
+        } finally {
+            document.getElementById('loading').style.display = 'none';
+        }
     }
 
     async function smartLoadData(subId, lesId) {
@@ -562,7 +687,7 @@
         if(input.value) { img.src = input.value; img.style.display = "block"; } else { img.style.display = "none"; }
     }
 
-    // --- NEW DRAG EDITOR HELPER ---
+    // --- DRAG EDITOR HELPER ---
     function addDragGroupRow(groupData = null) {
         const container = document.getElementById('options-container');
         const groupDiv = document.createElement('div');
@@ -572,7 +697,6 @@
         const items = groupData ? groupData.items : [''];
 
         let itemsHtml = '';
-        // Create initial input fields for items
         items.forEach(itm => {
             itemsHtml += `
             <div class="drag-item-row">
@@ -616,7 +740,6 @@
         if (type === 'drag') {
             addBtn.innerText = "+ Thêm Ô câu hỏi con (Nhóm)";
             addBtn.onclick = () => addDragGroupRow();
-            // Default 2 groups if new
             if(editingIndex === -1) { addDragGroupRow(); addDragGroupRow(); }
         } else if(type === 'fill') {
             addBtn.innerText = "+ Thêm dòng đáp án";
@@ -747,12 +870,43 @@
         setTimeout(() => { errDiv.innerText = ""; errDiv.style.color = 'var(--danger)'; }, 2000);
     }
 
+    // --- REORDER LOGIC (NEW) ---
+    function editOrder(currentIdx, spanEl) {
+        if (spanEl.querySelector('input')) return; // Prevent double click
+        
+        const oldVal = currentIdx + 1;
+        spanEl.innerHTML = `<input type="number" value="${oldVal}" onblur="confirmOrder(this, ${currentIdx})" onkeydown="if(event.key==='Enter') this.blur()">`;
+        spanEl.querySelector('input').focus();
+    }
+
+    function confirmOrder(input, oldIdx) {
+        let newVal = parseInt(input.value);
+        
+        // Validation: Must be number, positive, and within range
+        if (isNaN(newVal) || newVal < 1 || newVal > currentQuizData.length) {
+            alert("Vui lòng nhập số thứ tự hợp lệ (Số nguyên)!");
+            renderQuestionList(); // Reset view
+            return;
+        }
+
+        let newIdx = newVal - 1;
+        if (newIdx === oldIdx) { renderQuestionList(); return; } // No change
+
+        // Move item
+        const itemToMove = currentQuizData.splice(oldIdx, 1)[0];
+        currentQuizData.splice(newIdx, 0, itemToMove);
+
+        saveQuizData();
+        renderQuestionList();
+    }
+
     function renderQuestionList() {
         const list = document.getElementById('questions-list');
         const filter = document.getElementById('q-search').value.toLowerCase();
         
         list.innerHTML = "";
         
+        // Note: Reordering is disabled when searching/filtering for simplicity
         let filteredData = currentQuizData.map((q, idx) => ({...q, originalIdx: idx}));
         if(filter) {
             filteredData = filteredData.filter(q => q.text.toLowerCase().includes(filter));
@@ -762,9 +916,15 @@
         
         filteredData.forEach((q) => {
             const d = document.createElement('div'); d.className = 'q-item';
+            
+            // Only allow reorder click if NOT filtering (to avoid confusion)
+            const numHtml = filter 
+                ? `<span class="q-num">#${q.originalIdx + 1}</span>`
+                : `<span class="q-num" onclick="editOrder(${q.originalIdx}, this)" title="Nhấp để đổi thứ tự">#${q.originalIdx + 1}</span>`;
+
             d.innerHTML = `
                 <div class="q-item-content">
-                    <span class="q-num">#${q.originalIdx + 1}</span>
+                    ${numHtml}
                     <span class="badge">${q.type}</span>
                     <span>${q.text}</span>
                 </div>
@@ -781,7 +941,7 @@
     
     function editQ(idx) {
         editingIndex = idx; const q = currentQuizData[idx];
-        scrollToTop(); // --- AUTO SCROLL UP ---
+        scrollToTop(); 
         document.getElementById('form-header').innerText = `Đang sửa câu hỏi #${idx+1}`;
         document.getElementById('q-type').value = q.type; document.getElementById('q-text').value = q.text; document.getElementById('q-img').value = q.img||"";
         renderOptionsForm(q.type);
@@ -793,13 +953,9 @@
         } else if (q.type === 'tf') {
             q.items.forEach(item => addTFOptionRow(item));
         } else if(q.type === 'drag') {
-            // Support old and new format for compatibility
             if(q.groups) {
                 q.groups.forEach(g => addDragGroupRow(g));
             } else if (q.pairs) {
-                // Migrate on fly logic (simplified: 1 group per target)
-                // This is fallback if you load old data. 
-                // Suggest: Clear old data or just re-create.
                 q.pairs.forEach(p => addDragGroupRow({zone: p.target, items: [p.label]}));
             }
         } else {
@@ -830,13 +986,19 @@
         if(currentQuizData.length === 0) return;
         const content = document.getElementById('quiz-content');
         content.classList.add('shuffling');
-        setTimeout(() => { shuffleArray(currentQuizData); renderQuizQ(); }, 300);
+        setTimeout(() => { shuffleArray(currentQuizData); startQuiz(); }, 300);
         setTimeout(() => { content.classList.remove('shuffling'); }, 600);
     }
 
     function startQuiz() {
         if(currentQuizData.length === 0) return alert("Bài học này chưa có câu hỏi nào!");
         qIdx = 0; document.getElementById('quiz-content').style.display = 'block'; renderQuizQ();
+    }
+    
+    // NEW: STUDY MODE
+    function enableStudyMode() {
+        if(currentQuizData.length === 0) return;
+        showReviewScreen();
     }
 
     function renderQuizQ() {
@@ -858,9 +1020,7 @@
             const dBox = document.createElement('div'); dBox.className='drag-area';
             const zBox = document.createElement('div'); zBox.className='drag-area';
             
-            // Collect all items to drag from groups
             let allItems = [];
-            // Handle both old (pairs) and new (groups) format
             if(q.groups) {
                 q.groups.forEach(g => {
                     g.items.forEach(itm => allItems.push({ label: itm, targetZone: g.zone }));
@@ -877,7 +1037,6 @@
                 dBox.appendChild(el);
             });
 
-            // Render Zones
             const zones = q.groups ? q.groups.map(g => g.zone) : [...new Set(q.pairs.map(p=>p.target))];
             
             zones.forEach(zName => {
@@ -952,13 +1111,10 @@
         } else if (q.type === 'drag') {
             document.querySelectorAll('.drop-zone').forEach(z => {
                 const kids = z.querySelectorAll('.draggable');
-                // Logic: All items in zone must belong to zone. And simple check if zone matches.
-                // Strict check: User must drag correct items to correct zone.
                 if(kids.length === 0) ok = false; 
                 kids.forEach(k => { if(k.dataset.targetZone !== z.dataset.zoneName) ok = false; });
                 if(ok) z.classList.add('success'); else z.classList.add('error');
             });
-            // Also check if any items left undragged
             if(document.querySelector('.drag-area:first-child .draggable')) ok = false;
 
         } else if (q.type === 'fill') {
@@ -996,12 +1152,13 @@
         else { showSuccessModal(); }
     }
     
-    // --- REVIEW LOGIC ---
+    // --- UPDATED REVIEW LOGIC ---
     function showReviewScreen() {
         document.getElementById('quiz-content').classList.add('hide');
         document.getElementById('review-content').classList.remove('hide');
         document.getElementById('progress').innerText = "Xem lại kết quả";
         const list = document.getElementById('review-list'); list.innerHTML = "";
+        
         currentQuizData.forEach((q, i) => {
             const block = document.createElement('div'); block.className = 'review-q-block';
             let html = `<h3>Câu ${i+1}: ${q.text}</h3>`;
@@ -1011,18 +1168,29 @@
                 html += `<div style="color:var(--text-muted); font-style:italic;">(Đáp án đúng:)</div>`;
                 if(q.groups) {
                     q.groups.forEach(g => {
-                         html += `<div class="review-ans correct"><strong>${g.zone}:</strong> ${g.items.join(', ')}</div>`;
+                         html += `<div class="review-ans correct-highlight"><strong>${g.zone}:</strong> ${g.items.join(', ')}</div>`;
                     });
                 }
             } else if (q.type === 'fill') {
-                html += `<div class="review-ans correct">${(q.fillAnswers || [q.fillAnswer]).join(' / ')}</div>`;
+                html += `<div class="review-ans correct-highlight">${(q.fillAnswers || [q.fillAnswer]).join(' / ')}</div>`;
             } else if (q.type === 'tf') {
                  q.items.forEach(item => {
-                      html += `<div class="review-ans correct"><span>${item.text}</span> <strong style="margin-left:auto; text-transform:uppercase;">${item.correct ? "Đúng" : "Sai"}</strong></div>`;
+                      html += `<div class="review-ans correct-highlight"><span>${item.text}</span> <strong style="margin-left:auto; text-transform:uppercase;">${item.correct ? "Đúng" : "Sai"}</strong></div>`;
                  });
             } else {
+                // Single/Multi: Show ALL options
                 q.answers.forEach(a => {
-                    if(a.correct) html += `<div class="review-ans correct">${a.img ? `<img src="${a.img}">` : ''}<span>${a.text}</span><i class="fas fa-check" style="margin-left:auto;"></i></div>`;
+                    const isCorrect = a.correct;
+                    const styleClass = isCorrect ? 'correct-highlight' : 'normal-opt';
+                    const icon = isCorrect ? '<i class="fas fa-check-circle" style="margin-left:auto; font-size:1.2em;"></i>' : '';
+                    
+                    html += `
+                        <div class="review-ans ${styleClass}">
+                            ${a.img ? `<img src="${a.img}">` : ''}
+                            <span>${a.text}</span>
+                            ${icon}
+                        </div>
+                    `;
                 });
             }
             block.innerHTML = html; list.appendChild(block);
@@ -1038,4 +1206,4 @@
     document.addEventListener('contextmenu', function(e) { e.preventDefault(); }, false);
 </script>
 </body>
-</html>
+</html> 
