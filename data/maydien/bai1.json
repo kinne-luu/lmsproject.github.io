@@ -26,6 +26,35 @@
       }
     ]
   },
+
+  {
+    "type": "single",
+    "text": "Sơ đồ sau đây có mấy máy biến áp?",
+    "img": "https://media.discordapp.net/attachments/1468240488858390739/1468240516633067753/image.png?ex=69834d09&is=6981fb89&hm=98cf157f79d095272a00a183753e09dd4a7dbf57d5e68e026d8513ebf1118a40&=&format=webp&quality=lossless&width=1219&height=435",
+    "answers": [
+      {
+        "text": "3",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "2",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  
   {
     "type": "single",
     "text": "Tác dụng của dầu ở trong máy biến áp là dùng để:",
