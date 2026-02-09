@@ -996,6 +996,46 @@
             width: 90%;
             max-width: 350px;
         }
+
+/* --- CHẾ ĐỘ HIỂN THỊ LƯỚI CHO ĐÁP ÁN CÓ ẢNH --- */
+        #quiz-options-area.grid-mode {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 98%;
+            margin: 0 auto;
+        }
+
+        #quiz-options-area.grid-mode .ans-btn {
+            width: auto !important;
+            margin: 0 !important;
+            flex-direction: column !important;
+            justify-content: space-between;
+            text-align: center;
+            min-height: 200px; /* Tăng chiều cao để chứa ảnh to hơn */
+            padding: 20px 15px;
+            box-sizing: border-box;
+        }
+
+        #quiz-options-area.grid-mode .ans-btn img {
+            max-width: 95%;
+            max-height: 160px !important; /* Tăng kích thước ảnh tối đa */
+            width: auto;
+            height: auto;
+            margin: 0 auto 15px auto !important;
+            order: 0 !important;
+            display: block;
+            object-fit: contain;
+            border-radius: 8px; /* Bo góc nhẹ cho ảnh đồ thị trông mượt hơn */
+        }
+
+        /* Responsive: Màn hình điện thoại nhỏ thì về lại 1 cột cho dễ nhìn */
+        @media (max-width: 600px) {
+            #quiz-options-area.grid-mode {
+                grid-template-columns: 1fr; 
+            }
+        }
+
     </style>
 </head>
 
@@ -1791,11 +1831,22 @@
             showReviewScreen();
         }
 
-        function renderQuizQ() {
+       function renderQuizQ() {
             const q = currentQuizData[qIdx];
             const area = document.getElementById('quiz-options-area');
+            
+            // Reset Grid style cho mỗi câu hỏi mới
+            area.className = ''; 
+
             document.getElementById('progress').innerText = `Câu ${qIdx + 1} / ${currentQuizData.length}`;
-            document.getElementById('display-q-text').innerText = q.text;
+            
+            const qTextEl = document.getElementById('display-q-text');
+            if (q.text && q.text.trim() !== "") {
+                qTextEl.innerText = q.text;
+                qTextEl.style.display = 'block';
+            } else {
+                qTextEl.style.display = 'none';
+            }
 
             const mi = document.getElementById('display-q-img');
             if (q.img) { mi.src = q.img; mi.style.display = 'inline-block'; } else mi.style.display = 'none';
@@ -1866,9 +1917,20 @@
                 });
             } else {
                 if (q.type === 'multi') document.getElementById('check-btn').classList.remove('hide');
+                
+                // Kích hoạt lưới 2 cột nếu bất kỳ đáp án nào có chứa link ảnh
+                if (q.answers.some(a => a.img)) {
+                    area.classList.add('grid-mode');
+                }
+
                 shuffleArray([...q.answers]).forEach(a => {
                     const btn = document.createElement('div'); btn.className = 'ans-btn';
-                    btn.innerHTML = `${a.img ? `<img src="${a.img}" onclick="viewImage(this.src)">` : ''}<span>${a.text}</span>`;
+                    
+                    let btnContent = '';
+                    if(a.img) btnContent += `<img src="${a.img}" onclick="viewImage(this.src)">`;
+                    if(a.text) btnContent += `<span>${a.text}</span>`;
+                    btn.innerHTML = btnContent;
+
                     btn.onclick = (e) => {
                         if (e.target.tagName === 'IMG') return;
                         if (q.type === 'single') {
