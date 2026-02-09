@@ -1608,7 +1608,7 @@
             const text = document.getElementById('q-text').value.trim();
             const img = document.getElementById('q-img').value.trim();
 
-            if (!text) return showSaveError("Vui lòng nhập nội dung câu hỏi!");
+            if (!text && !img) return showSaveError("Vui lòng nhập nội dung hoặc hình ảnh!");
             let newQ = { type, text, img: img || null };
 
             if (type === 'drag') {
@@ -1641,7 +1641,6 @@
             else {
                 newQ.answers = []; let correctCount = 0;
                 document.querySelectorAll('.opt-row').forEach(r => {
-                    // CHANGED: Get value from textarea (.opt-text-val)
                     const txt = r.querySelector('.opt-text-val').value.trim();
                     const i = r.querySelector('.opt-img-input').value.trim();
                     const c = r.querySelector('.correct-chk').checked;
@@ -1998,5 +1997,3 @@
     </script>
 </body>
 </html>
-
-
