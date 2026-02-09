@@ -1,0 +1,24 @@
+[
+  {
+    "type": "single",
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153002.png",
+    "answers": [
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153016.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153036.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153048.png",
+        "correct": true
+      }
+    ]
+  }
+]
