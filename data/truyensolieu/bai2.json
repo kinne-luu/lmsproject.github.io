@@ -1,0 +1,785 @@
+[
+  {
+    "type": "single",
+    "text": "Token bus (IEEE 802.4) kết hợp các đặc tính của ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Ethernet và phần cứng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Ethernet và MAN",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Ethernet và Token ring",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Ethernet và LAN",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Hình vẽ dưới đây mô tả cấu trúc khung của ?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115637.png",
+    "answers": [
+      {
+        "text": "Token Ring",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Token Bus",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Token Data",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "D. Token SD",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Công nghệ mạng cục bộ Token Ring là một giao thức truyền thông cho mạng nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Mạng cục bộ",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Mạng diện rộng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng viba",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Mạng vệ tinh",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trường SD trong Khung data/command có nhiệm vụ gì ?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115637.png",
+    "answers": [
+      {
+        "text": "Thông báo trường điều khiển biết có khung đến và giúp đồng bộ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thông báo bộ thu biết có khung đến và giúp đồng bộ",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Thông báo trường địa chỉ biết có khung đến và giúp đồng bộ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thông báo bộ nhận biết có khung đến và giúp đồng bộ",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Mục đích chính của IP là ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sử dụng trong các mạng thế hệ mới",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sử dụng trong các mạng di động nâng cao",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sử dụng trong các mạng không có sự liên hệ với Internet",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Cung cấp khả năng kết nối các mạng con thành liên mạng để truyền dữ liệu",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Đơn vị dữ liệu dùng trong giao thức IP là ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "mm",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Datagram",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "cm",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "m/s",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IPv4 có bao nhiêu bit?",
+    "img": null,
+    "answers": [
+      {
+        "text": "64 bit",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "32 bit",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "128 bit",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "16 bit",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IPv6 có bao nhiêu bit ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "32 bit",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "64 bit",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "128 bit",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "256 bit",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Vận dụng kiến thức đã học về địa chỉ IP. Em hãy cho biết trong các địa chỉ IP dưới đây địa chỉ nào thuộc lớp A?",
+    "img": null,
+    "answers": [
+      {
+        "text": "224.0.0.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "10.0.0.1",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "172.16.0.1",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IP nào sau đây là địa chỉ broadcast trong mạng lớp C (subnet mask 255.255.255.0) ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "192.168.1.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.0",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.128",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.255",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IP 192.168.1.0/24 có thể chia thành bao nhiêu mạng con nếu chia theo mặt nạ 255.255.255.192?",
+    "img": null,
+    "answers": [
+      {
+        "text": "4 mạng con, mỗi mạng có 30 địa chỉ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4 mạng con, mỗi mạng có 62 địa chỉ",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "8 mạng con, mỗi mạng có 30 địa chỉ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "2 mạng con, mỗi mạng có 62 địa chỉ",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Mặt nạ mạng 255.255.255.240 có thể chia dải địa chỉ thành bao nhiêu mạng con?",
+    "img": null,
+    "answers": [
+      {
+        "text": "64 mạng con",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "32 mạng con",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "8 mạng con",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "16 mạng con",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Mặt nạ mạng 255.255.255.248 có thể cung cấp bao nhiêu địa chỉ IP khả dụng cho các thiết bị trong mỗi mạng con?",
+    "img": null,
+    "answers": [
+      {
+        "text": "6 địa chỉ IP khả dụng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "62 địa chỉ IP khả dụng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "30 địa chỉ IP khả dụng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "14 địa chỉ IP khả dụng",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IP 255.255.255.255 được sử dụng để làm địa chỉ nào trong các loại địa chỉ sau đây?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Địa chỉ loopback",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Địa chỉ broadcast",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Địa chỉ riêng tư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Địa chỉ gateway",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trong mạng Token Ring, việc truyền dữ liệu dựa trên:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Định tuyến gói tin thông minh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Truyền không cần token",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Truyền đồng thời giữa tất cả các nút",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sở hữu token và truyền tuần tự theo vòng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trường SD trong Khung data/command có từ ..... byte đến ..... bytes chưa địa chỉ vật lý của đích đến ?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115637.png",
+    "answers": [
+      {
+        "text": "1 byte đến 3 byte",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "2 byte đến 6 byte",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "2 byte đến 4 byte",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "3 byte đến 5 byte",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Vai trò của IP tương tự vai trò của giao thức tầng nào trong mô hình OSI ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Tầng phiên",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng vận chuyển",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tầng mạng",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tầng trình bày",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Một Datagram trong giao thức IP được chia làm những phần nào sau đây ? (chọn 02 đáp án đúng)",
+    "img": null,
+    "answers": [
+      {
+        "text": "Phần tiêu đề (header)",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phần địa chỉ (Address)",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phần chứa dữ liệu cần truyền (Data)",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phần điều khiển (Control)",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ mạng IP 10.0.0.0/8 có bao nhiêu subnet con khi chia thành các subnet có subnet mask /16?",
+    "img": null,
+    "answers": [
+      {
+        "text": "256",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "2",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "128",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "64",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Vận dụng kiến thức đã học về địa chỉ IP. Em hãy cho biết trong các địa chỉ IP dưới đây địa chỉ nào thuộc lớp B?",
+    "img": null,
+    "answers": [
+      {
+        "text": "172.16.0.1",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "224.0.0.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "10.10.10.10",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Địa chỉ IP nào sau đây là địa chỉ gateway mặc định trong mạng lớp C (subnet mask 255.255.255.0) ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "192.168.1.0",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.128",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.255",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "192.168.1.1",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Từ hình vẽ cấu trúc phân lớp của một địa chỉ IP dưới đây ta có thể nhận thấy địa chỉ lớp A có giá trị?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115838.png",
+    "answers": [
+      {
+        "text": "Nhỏ hơn 135",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nhỏ hơn 128",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Nhỏ hơn 129",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nhỏ hơn 130",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Vận dụng kiến thức đã học về địa chỉ IP. Em hãy cho biết trong các địa chỉ IP dưới đây địa chỉ nào thuộc lớp C?",
+    "img": null,
+    "answers": [
+      {
+        "text": "192.168.0.1",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "10.0.0.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "128.0.0.1",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "224.0.0.1",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Modem có vai trò: (chọn 02 đáp án đúng)",
+    "img": null,
+    "answers": [
+      {
+        "text": "Chuyển đổi tín hiệu analog - số tại đầu nhận",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Định tuyến dữ liệu trong mạng LAN",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Biến đổi tín hiệu số -> analog để truyền trên đường dây điện thoại",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Kết nối trực tiếp giữa hai máy tính mà không cần mạng",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Token ring dùng một địa chỉ bao nhiêu byte trong NIC tương tự như các địa chỉ của Ethernet ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "8 bytes",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "6 bytes",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "7 bytes",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "5 bytes",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trường SD trong Khung data/command chứa dữ liệu và được phân phát đến ..... bytes",
+    "img": null,
+    "answers": [
+      {
+        "text": "5500 byte",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "3500 byte",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "6500 byte",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "4500 byte",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Trường CRC trong Khung data/comman dùng để?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115637.png",
+    "answers": [
+      {
+        "text": "Phát hiện sai CRC-02",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phát hiện sai CRC-22",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phát hiện sai CRC-32",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Phát hiện sai CRC-12",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Từ hình vẽ cấu trúc phân lớp của một địa chỉ IP dưới đây ta có thể nhận thấy địa chỉ lớp B có giá trị ?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115838.png",
+    "answers": [
+      {
+        "text": "Từ 129 đến 192",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Từ 130 đến 193",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Từ 128 đến 191",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Từ 135 đến 197",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Từ hình vẽ cấu trúc phân lớp của một địa chỉ IP dưới đây ta có thể nhận thấy địa chỉ lớp C có giá trị?",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/truyen%20so%20lieu/bai%202/Screenshot%202026-02-11%20115838.png",
+    "answers": [
+      {
+        "text": "Từ 193 đến 224",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Từ 194 đến 225",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Từ 195 đến 226",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Từ 192 đến 223",
+        "img": null,
+        "correct": true
+      }
+    ]
+  }
+]
