@@ -1,0 +1,553 @@
+[
+  {
+    "type": "single",
+    "text": "Nguồn gốc chủ yếu của tích lũy tư bản là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị thặng dư",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tiền huy động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản phẩm thặng dư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tiền đi vay",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Đâu là thuộc tính\ncủa hàng hoa sức lao động?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị của hàng hoá sức lao động",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Giá trị thặng dư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thuộc tính sử dụng của hàng hoa sức lao động",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giá trị sử dụng của hàng hoá sức lao động",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Ý nào đúng nhất về tư bản bất biến (c) là?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị của nó chuyển dần vào sản phẩm qua khấu hao",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giá trị của nó lớn lên trong quá trình sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giá trị của nó không thay đổi và được chuyển ngay sang sản phẩm sau một chu kỳ sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Giá trị của nó không thay đổi về lượng và được chuyển nguyên vẹn sang sản phẩm",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Dựa vào căn cứ nào để chia tư bản thành tư bản bất biến và tư bản khả biến.\n Hãy chọn 1 phương án trả lời đúng nhất.",
+    "img": null,
+    "answers": [
+      {
+        "text": "Phương thức chuyển giá trị các bộ phận tư bản sang sản phẩm",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hao mòn hữu hình hoặc vô hình",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tốc độ chu chuyển của tư bản",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Vai trò các bộ phận tư bản trong quá trình sản xuất giá trị thặng dư",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Hao mòn tư bản cố định có các loại nào?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Hao mòn vô hình",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Hao mòn vật chất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hao mòn tự nhiên",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hao mòn hữu hình",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Dựa vào căn cứ nào để chia tư bản ra thành tư bản cố định và tư bản lưu động?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sự thay đổi về lượng trong quá trình sản",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Vai trò các bộ phận tư bản trong quá trình sản xuất giá trị thặng dư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Tốc độ chu chuyển chung của tư bản",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phương thức chuyển giá trị của các bộ phận tư bản sang sản phẩm",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Tư bản đầu tư là 900 usd, trong đó số tư bản đầu tư vào tư liệu sản xuất là 600 usd. \nChọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Với m'= 200% thì giá trị hàng hoá là 1.800 usd",
+        "correct": false
+      },
+      {
+        "text": "Với m'= 100% thì giá trị hàng hoá là 1.500 usd",
+        "correct": false
+      },
+      {
+        "text": "Với m'= 300% thì giá trị hàng hoá là 2.000 usd",
+        "correct": false
+      },
+      {
+        "text": "Với m'= 200% thì giá trị hàng hoá là 1.500 usd",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Phương pháp sản xuất giá trị thặng dư tuyệt đối là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Năng suất lao động, giá trị sức lao động không đổi và thời gian lao động tất yếu không đổi",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tiết kiệm chi phí sản xuất",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sử dụng kỹ thuật tiên tiến",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Kéo dài ngày lao động vượt quá thời gian lao động tất yếu",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Chọn 1 phương án trả lời đúng nhất. Giá trị thặng dư siêu ngạch còn được gọi là:\nHãy chọn 1 đáp án đúng nhất !",
+    "img": null,
+    "answers": [
+      {
+        "text": "Hình thức biến tướng của sản phẩm thặng dư tương đối.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hình thức biểu hiện của giá trị thặng dư tương đối.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hình thức biến tướng của giá trị thặng dư tuyệt đối.",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hình thức biến tướng của giá trị thặng dư tương đối",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Chọn 1 phương án trả lời đúng nhất. Phương pháp sản xuất giá trị thặng dư tuyệt đối có hạn chế gì?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Bị giới hạn bởi thời gian sinh học của con người",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Không bị ảnh hưởng bởi pháp luật",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Không áp dụng cho doanh nghiệp nhỏ",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Không tạo ra lợi nhuận",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Điều kiện để nhà tư bản thu được giá trị thặng dư siêu ngạch là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Tăng ngày lao động của công nhân",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Năng suất lao động cá biệt cao hơn mức trung bình của xã hội",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Sản phẩm sản xuất ra có giá trị thấp hơn giá trị xã hội nhưng vẫn bán theo giá thị trường",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tổ chức sản xuất theo lối thủ công truyền thống",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Để đạt được giá trị\nthặng dư siêu ngạch, doanh nghiệp cần:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Trả lương công nhân cao hơn mức quy định",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Bán hàng hóa với giá trị cao hơn cả giá trị xã hội",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sản xuất ra hàng hóa có giá trị thấp hơn mức trung bình xã hội",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Áp dụng công nghệ mới sớm hơn đối thủ cạnh tranh",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Điều kiện để sức\nlao động trở thành hàng hoá là:",
+    "img": null,
+    "answers": [
+      {
+        "text": "Nhà tư bản có quyền ra lệnh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Người lao động không có tư liệu sản xuất",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Người lao động được tự do về thân thể",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Người lao động có học vấn cao",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng.\nPhương pháp sản xuất giá trị thặng dư tuyệt đối chủ yếu dựa vào biện pháp nào sau đây?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Kéo dài thời gian lao động vượt quá thời gian lao động tất yếu",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Rút ngắn thời gian lao động tất yếu",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Không thay đổi năng suất lao động nhưng kéo dài ngày lao động",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tăng năng suất lao động trong ngành sản xuất tư liệu sinh hoạt",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Cho biết tư bản bất biến c = 1.500 USD, tỷ suất giá trị thặng dư m'= 100%. Chọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 3/1 thì giá trị hàng hoá là 2.600 USD",
+        "correct": false
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 2/1 thì giá trị hàng hóa là 3.000 USD",
+        "correct": true
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 3/1 thì giá trị hàng hóa là 2.500 USD",
+        "correct": true
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 5/1 thì giá trị hàng hoá là 2.250 USD",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Khi nào tiền tệ biến thành tư bản?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Dùng tiền đầu tư vào sản xuất kinh doanh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Dùng tiền để buôn bán mua rẻ, bán đắt",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Sức lao động trở thành hàng hoá",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Có lượng tiền tệ đủ lớn",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Tỷ suất giá trị thặng dư (m') phản ánh điều gì?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Số lượng giá trị thặng dư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Quy mô bóc lột của nhà tư bản đối với người công nhân làm thuê",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Trình độ bóc lột của tư bản đối với công nhân làm thuê",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Hiệu quả của nhà tư bản",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Cho biết chi phí tư bản khả biến là 2000 usd. \nChọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Nếu m' = 100% thì khối lượng giá trị mới do công nhân tạo ra là 4000 usd",
+        "correct": true
+      },
+      {
+        "text": "Nếu m'= 300% thì khối lượng giá trị mới do công nhân tạo ra là 7000 usd",
+        "correct": false
+      },
+      {
+        "text": "Nếu m'= 400% thì khối lượng giá trị mới do công nhân tạo ra là 8000 usd",
+        "correct": false
+      },
+      {
+        "text": "Nếu m'= 200% thì khối lượng giá trị mới do công nhân tạo ra là 6000 usd",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "multi",
+    "text": "Chọn 2 phương án trả lời đúng. Đâu là thuộc tính của hàng hoa sức lao động?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Giá trị của hàng hoa sức lao động",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Giá trị sử dụng của hàng hoá sức lao động",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Giá trị thặng dư",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Thuộc tính sử dụng của hàng hoa sức lao động",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Giá trị thặng dư là gì?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Lợi nhuận thu được của người sản xuất kinh doanh",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Hiệu số giữa giá trị hàng hoá với chi phí sản xuất tư bản chủ nghĩa",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Phần giá trị mới dôi ra ngoài giá trị sức lao động do người công nhân làm thuê tạo ra",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Giá trị của tư bản tự tăng lên",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "tf",
+    "text": "Cho biết tư bản bất biến c =1.200 USD, tỷ suất giá trị thặng dư m'= 200%. Chọn đáp án (Đúng hoặc Sai) với từng trường hợp sau:",
+    "img": null,
+    "items": [
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 4/1 thì giá trị hàng hoa là 2.000 usd",
+        "correct": false
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 2/1 thì giá trị hàng hoá là 3000 usd",
+        "correct": true
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 4/1 thì giá trị hàng hoá là 1.800 usd",
+        "correct": false
+      },
+      {
+        "text": "Với cấu tạo hữu cơ của tư bản c/v = 3/1 thì giá trị hàng hoá là 2.400 usd",
+        "correct": true
+      }
+    ]
+  }
+]
