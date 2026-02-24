@@ -7,8 +7,21 @@
     <title>LMS - Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon"
-        href="https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thumbnail/cut.png">
+    <link rel="icon" type="image/x-icon" href="https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thumbnail/cut.png">
+    
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            startup: {
+                typeset: false // Tắt tự động render ban đầu để gọi thủ công qua JS
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         :root {
             /* --- DARK THEME PALETTE --- */
@@ -285,11 +298,9 @@
             border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: flex-start;
-            /* Canh lề trên để đẹp với textarea */
             gap: 15px;
         }
 
-        /* Style cho textarea nhập đáp án */
         textarea.opt-text-val {
             background: transparent !important;
             border: none !important;
@@ -297,13 +308,10 @@
             border-radius: 0 !important;
             width: 100%;
             color: white !important;
-            font-family: 'Inter', sans-serif;
+            font-family: inherit;
             resize: none;
-            /* Tắt kéo thủ công */
             overflow: hidden;
-            /* Ẩn thanh cuộn */
             min-height: 28px;
-            /* Chiều cao tối thiểu */
             line-height: 1.5;
             padding: 5px 0;
             transition: border-color 0.2s;
@@ -315,14 +323,19 @@
             background: rgba(255, 255, 255, 0.02) !important;
         }
 
-        /* Input ảnh nhỏ gọn bên cạnh */
+        .opt-img-wrapper {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
         .opt-img-input {
-            width: 30% !important;
+            width: 100% !important;
             font-size: 0.85em;
             background: rgba(255, 255, 255, 0.05) !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
             height: 35px;
-            /* Chiều cao cố định cho input ảnh */
         }
 
         /* --- DRAG EDITOR STYLES --- */
@@ -997,7 +1010,7 @@
             max-width: 350px;
         }
 
-/* --- CHẾ ĐỘ HIỂN THỊ LƯỚI CHO ĐÁP ÁN CÓ ẢNH --- */
+        /* --- CHẾ ĐỘ HIỂN THỊ LƯỚI CHO ĐÁP ÁN CÓ ẢNH --- */
         #quiz-options-area.grid-mode {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1012,24 +1025,23 @@
             flex-direction: column !important;
             justify-content: space-between;
             text-align: center;
-            min-height: 200px; /* Tăng chiều cao để chứa ảnh to hơn */
+            min-height: 200px;
             padding: 20px 15px;
             box-sizing: border-box;
         }
 
         #quiz-options-area.grid-mode .ans-btn img {
             max-width: 95%;
-            max-height: 160px !important; /* Tăng kích thước ảnh tối đa */
+            max-height: 160px !important;
             width: auto;
             height: auto;
             margin: 0 auto 15px auto !important;
             order: 0 !important;
             display: block;
             object-fit: contain;
-            border-radius: 8px; /* Bo góc nhẹ cho ảnh đồ thị trông mượt hơn */
+            border-radius: 8px;
         }
 
-        /* Responsive: Màn hình điện thoại nhỏ thì về lại 1 cột cho dễ nhìn */
         @media (max-width: 600px) {
             #quiz-options-area.grid-mode {
                 grid-template-columns: 1fr; 
@@ -1251,6 +1263,13 @@
         }
         init();
 
+        // --- HELPER RENDERING MATHJAX ---
+        function renderMath() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                MathJax.typesetPromise().catch((err) => console.log('MathJax rendering error: ', err));
+            }
+        }
+
         // --- IMAGE VIEWER ---
         function viewImage(src) {
             if (window.event) window.event.stopPropagation();
@@ -1434,6 +1453,18 @@
             const img = document.getElementById(imgId);
             if (input.value) { img.src = input.value; img.style.display = "block"; } else { img.style.display = "none"; }
         }
+        
+        // Xem trước ảnh của đáp án
+        function previewOptImage(input) {
+            const imgEl = input.nextElementSibling;
+            if (input.value.trim()) {
+                imgEl.src = input.value.trim();
+                imgEl.style.display = 'block';
+            } else {
+                imgEl.src = '';
+                imgEl.style.display = 'none';
+            }
+        }
 
         // --- DRAG EDITOR HELPER ---
         function addDragGroupRow(groupData = null) {
@@ -1564,7 +1595,7 @@
             });
         }
 
-        // --- MAIN OPTION ROW LOGIC (UPDATED FOR TEXTAREA & ENTER) ---
+        // --- MAIN OPTION ROW LOGIC (CẬP NHẬT ĐỂ BẤM XEM ĐƯỢC ẢNH) ---
         function addNewOptionRow(data = null) {
             const type = document.getElementById('q-type').value;
             const container = document.getElementById('options-container');
@@ -1579,43 +1610,38 @@
             <input type="${itype}" name="cor" class="correct-chk" ${chk} style="transform:scale(1.5); cursor:pointer; accent-color: var(--accent); margin-top:8px;">
             <div style="flex:1; display:flex; gap:10px; align-items:flex-start;">
                 <textarea class="opt-text-val" rows="1" placeholder="Nhập đáp án..." oninput="autoResize(this)">${txt}</textarea>
-                <input type="text" class="opt-img-input" value="${img}" placeholder="Link ảnh...">
+                <div class="opt-img-wrapper">
+                    <input type="text" class="opt-img-input" value="${img}" placeholder="Link ảnh..." oninput="previewOptImage(this)">
+                    <img class="opt-preview-img" src="${img}" 
+                         onclick="viewImage(this.src)"
+                         style="display: ${img ? 'block' : 'none'}; max-height: 40px; border-radius: 4px; border: 1px solid #555; object-fit: contain; margin-top: 5px; cursor: zoom-in;">
+                </div>
             </div>
             <button class="btn-icon" onclick="this.parentElement.remove()"><i class="fas fa-times"></i></button>
         `;
             container.appendChild(div);
 
-            // --- Handle Enter Key Logic ---
             const txtArea = div.querySelector('.opt-text-val');
-
-            // Init resize
             if (txt) autoResize(txtArea);
 
             txtArea.addEventListener('keydown', function (e) {
-                // Enter but NO Shift => Go to next field or create new
                 if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
-
                     const allTextAreas = document.querySelectorAll('.opt-text-val');
                     const currentIndex = Array.from(allTextAreas).indexOf(this);
 
-                    // If there is a next row
                     if (currentIndex < allTextAreas.length - 1) {
                         allTextAreas[currentIndex + 1].focus();
                     } else {
-                        // Create new row
                         addNewOptionRow();
-                        // Wait for DOM then focus
                         setTimeout(() => {
                             const newAll = document.querySelectorAll('.opt-text-val');
                             newAll[newAll.length - 1].focus();
                         }, 10);
                     }
                 }
-                // Shift + Enter => Default behavior (new line) -> handled natively by textarea
             });
 
-            // Also allow Enter on image input to create new row
             const imgInput = div.querySelector('.opt-img-input');
             imgInput.addEventListener('keydown', function (e) {
                 if (e.key === 'Enter') {
@@ -1629,7 +1655,6 @@
             });
         }
 
-        // Auto resize textarea
         function autoResize(el) {
             el.style.height = 'auto';
             el.style.height = el.scrollHeight + 'px';
@@ -1762,6 +1787,8 @@
             `;
                 list.appendChild(d);
             });
+
+            renderMath();
         }
 
         function delQ(idx) { if (confirm("Xóa câu hỏi này?")) { currentQuizData.splice(idx, 1); saveQuizData(); renderQuestionList(); } }
@@ -1835,7 +1862,6 @@
             const q = currentQuizData[qIdx];
             const area = document.getElementById('quiz-options-area');
             
-            // Reset Grid style cho mỗi câu hỏi mới
             area.className = ''; 
 
             document.getElementById('progress').innerText = `Câu ${qIdx + 1} / ${currentQuizData.length}`;
@@ -1918,7 +1944,6 @@
             } else {
                 if (q.type === 'multi') document.getElementById('check-btn').classList.remove('hide');
                 
-                // Kích hoạt lưới 2 cột nếu bất kỳ đáp án nào có chứa link ảnh
                 if (q.answers.some(a => a.img)) {
                     area.classList.add('grid-mode');
                 }
@@ -1941,6 +1966,8 @@
                     area.appendChild(btn);
                 });
             }
+
+            renderMath();
         }
 
         function selectTF(rowIdx, val, btn) {
@@ -2004,7 +2031,6 @@
             else { showSuccessModal(); }
         }
 
-        // --- UPDATED REVIEW LOGIC ---
         function showReviewScreen() {
             document.getElementById('quiz-content').classList.add('hide');
             document.getElementById('review-content').classList.remove('hide');
@@ -2030,7 +2056,6 @@
                         html += `<div class="review-ans correct-highlight"><span>${item.text}</span> <strong style="margin-left:auto; text-transform:uppercase;">${item.correct ? "Đúng" : "Sai"}</strong></div>`;
                     });
                 } else {
-                    // Single/Multi: Show ALL options
                     q.answers.forEach(a => {
                         const isCorrect = a.correct;
                         const styleClass = isCorrect ? 'correct-highlight' : 'normal-opt';
@@ -2047,9 +2072,10 @@
                 }
                 block.innerHTML = html; list.appendChild(block);
             });
+
+            renderMath();
         }
 
-        // --- SECURITY ---
         document.addEventListener('keydown', function (e) {
             if (e.keyCode === 123) { e.preventDefault(); return false; }
             if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) { e.preventDefault(); return false; }
