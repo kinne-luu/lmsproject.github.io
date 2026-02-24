@@ -131,8 +131,8 @@
   },
   {
     "type": "single",
-    "text": "Để chứng minh g(t-to)+g(t+to) có biến đổi fourier là $g(t-t_0) + g(t+t_0) \\xrightarrow{\\mathcal{F}} G(\\omega)e^{-j\\omega t_0} + G(\\omega)e^{j\\omega t_0} = G(\\omega)(e^{j\\omega t_0} + e^{-j\\omega t_0}) = 2G(\\omega)\\cos(\\omega t_0)$ cần vận dụng tính chất nào của\nbiến đổi Fourier ?",
-    "img": null,
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%206/Screenshot%202026-02-24%20125606.png",
     "answers": [
       {
         "text": "co dãn theo thang đo",
@@ -151,6 +151,222 @@
       },
       {
         "text": "Vi phân theo tần số",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%208/Screenshot%202026-02-24%20125756.png",
+    "answers": [
+      {
+        "text": "Tích chập",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "co dãn theo thang đo",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Vi phân theo tần số",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "dịch chuyển theo tần số",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Khối nào trong thư viện Simulink Matlab có thể dùng để hiển thị dạng sóng sine ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Scope",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Mux",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Gain",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Constant",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Chọn đáp án đúng nhất mô tả vai trò của khối\nPulse Generator trong Simulink Matlab",
+    "img": null,
+    "answers": [
+      {
+        "text": "chủ yếu để tạo xung sine",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "chủ yếu để tạo xung răng cưa",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "chủ yếu để tạo xung tam giác",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "chủ yếu để tạo xung hình chữ nhật",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Khi điều chỉnh tham số Amplitude của khối Signal\nGenerator trong Simulink Matlab thì",
+    "img": null,
+    "answers": [
+      {
+        "text": "biên độ của tín hiệu sẽ thay đổi",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "tần số của tín hiệu sẽ thay đổi",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "tín hiệu sẽ bị méo dạng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "pha của tín hiệu sẽ thay đổi",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Nếu muốn khối Pulse Generator tạo ra tín hiệu\nxung có độ rộng 25% của chu kỳ, thì cần điều\nchỉnh tham số nào",
+    "img": null,
+    "answers": [
+      {
+        "text": "Sample Time",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Amplitude",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Period",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Pulse Width",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%2013/Screenshot%202026-02-24%20130323.png",
+    "answers": [
+      {
+        "text": "Điều chỉnh tham số Frequency của khối Sine Wave là 10",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Điều chỉnh tham số Amplitude của khối Sine Wave là 10",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Điều chỉnh tham số Gain của khối Gain là 10",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Điều chỉnh tham số Sample Time của khối Sine Wave là 10",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Để tạo ra một tín hiệu sóng vuông với biên độ 5,\nthì cần cấu hình những tham số nào trong khối\nSignal Generator của thư viện Simulink Matlab?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Chọn wave form là sine, Frequency là 5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chọn wave form là square, Amplitude là 5",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Chọn wave form là square, Frequency là 5",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chọn wave form là sine, Amplitude là 5",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Để tạo tín hiệu sóng sine có pha ban đầu là 90°,\nthì cần cấu hình tham số nào trong khối Sine Wave\ncủa thư viện Simulink Matlab?",
+    "img": null,
+    "answers": [
+      {
+        "text": "Chọn tham số Sample time là 90",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chọn tham số Phase là pi/2",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Chọn tham số Phase là 90",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Chọn tham số Amplitude là 90",
         "img": null,
         "correct": false
       }
