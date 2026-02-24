@@ -1,6 +1,60 @@
 [
   {
     "type": "single",
+    "text": "Chọn đáp án đúng nhất mô tả tính chất dịch chuyển theo thời gian của phép biến đổi Fourier",
+    "img": null,
+    "answers": [
+      {
+        "text": "Nếu tín hiệu trong miền thời gian dịch chuyển 1 khoảng to thì pha và biên độ phổ của tín hiệu trong miền tần số sẽ không thay đổi",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nếu tín hiệu trong miền tần số dịch chuyển 1 khoảng to thì pha của tín hiệu trong miền thời gian sẽ thay đổi",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nếu tín hiệu trong miền thời gian dịch chuyển 1 khoảng to thì pha của tín hiệu trong miền tần số sẽ thay đổi",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Nếu tín hiệu trong miền tần số dịch chuyển 1 khoảng fo thì pha của tín hiệu trong miền tần số sẽ thay đổi",
+        "img": null,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "Chọn đáp án đúng nhất mô tả mối liên hệ của tín hiệu trong miền thời gian và miền tần số",
+    "img": null,
+    "answers": [
+      {
+        "text": "Nếu tín hiệu bị giới hạn trong miền thời gian thì phổ của nó hẹp",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nếu tín hiệu có độ rộng xung càng lớn thì phổ của nó càng rộng",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nếu tín hiệu có độ rộng xung càng nhỏ thì phổ của nó càng hẹp",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Nếu tín hiệu bị giới hạn trong miền thời gian thì phổ của nó rất rộng",
+        "img": null,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
     "text": "",
     "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153002.png",
     "answers": [
@@ -18,6 +72,60 @@
         "text": "",
         "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%203/Screenshot%202026-02-09%20153048.png",
         "correct": true
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%204/Screenshot%202026-02-24%20115420.png",
+    "answers": [
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%204/Screenshot%202026-02-24%20115441.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%204/Screenshot%202026-02-24%20115448.png",
+        "correct": true
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%204/Screenshot%202026-02-24%20115453.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%204/Screenshot%202026-02-24%20115457.png",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "text": "",
+    "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%205/Screenshot%202026-02-24%20115858.png",
+    "answers": [
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%205/Screenshot%202026-02-24%20115902.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%205/Screenshot%202026-02-24%20115906.png",
+        "correct": false
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%205/Screenshot%202026-02-24%20115910.png",
+        "correct": true
+      },
+      {
+        "text": "",
+        "img": "https://pub-c498a98c7a3843c7b4440a03435217a3.r2.dev/thong%20tin%20so/bai%202/cau%205/Screenshot%202026-02-24%20115914.png",
+        "correct": false
       }
     ]
   }
