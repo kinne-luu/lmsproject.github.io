@@ -128,5 +128,32 @@
         "correct": false
       }
     ]
+  },
+  {
+    "type": "single",
+    "text": "Để chứng minh g(t-to)+g(t+to) có biến đổi fourier là $g(t-t_0) + g(t+t_0) \\xrightarrow{\\mathcal{F}} G(\\omega)e^{-j\\omega t_0} + G(\\omega)e^{j\\omega t_0} = G(\\omega)(e^{j\\omega t_0} + e^{-j\\omega t_0}) = 2G(\\omega)\\cos(\\omega t_0)$ cần vận dụng tính chất nào của\nbiến đổi Fourier ?",
+    "img": null,
+    "answers": [
+      {
+        "text": "co dãn theo thang đo",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "dịch chuyển theo thời gian",
+        "img": null,
+        "correct": true
+      },
+      {
+        "text": "Tích chập",
+        "img": null,
+        "correct": false
+      },
+      {
+        "text": "Vi phân theo tần số",
+        "img": null,
+        "correct": false
+      }
+    ]
   }
 ]
